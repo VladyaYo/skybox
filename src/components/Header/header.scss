@@ -1,0 +1,25 @@
+@import '../../assets/styles/var';
+
+//header{
+//    @include flex($row, $btwen, $center);
+//    background-color: $brand1;
+//    .header-burger{
+//        display: none;
+//    }
+//    .logo{
+//        height: 61px;
+//        max-width: 179px;
+//        svg{
+//            width: 100%;
+//        }
+//    }
+//    ul{
+//        @include flex($row, $btwen, $center);
+//        @extend %menuText;
+//        text-transform: uppercase;
+//        a{
+//            @extend %menuText;
+//            color: $white;
+//        }
+//    }
+//}

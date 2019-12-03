@@ -1,0 +1,113 @@
+$row: row;
+$col: column;
+$center: center;
+$around: space-around;
+$btwen: space-between;
+$start: flex-start;
+$end: flex-end;
+
+@mixin flex($direction,$justify,$align) {
+  display: flex;
+  flex-flow: #{$direction} wrap;
+  justify-content: #{$justify};
+  align-items: #{$align};
+}
+
+$phone: '(min-width: 320px) and (max-width: 667px)';
+$phone-land: '(min-width: 320px) and (max-width: 667px) and (orientation: landscape)';
+$tablet-portrait: '(max-width: 1024px)';
+$tablet-landscape: '(min-width: 768px) and (max-width: 1024px) and (orientation: landscape)';
+$interval-back: '(max-width: 1300px)';
+$interval: '(max-width: 1200px)';
+$large-desktop: '(min-width: 1440px)';
+$full-desktop: '(min-width: 1920px)';
+$uhd-desktop: '(min-width: 2500px)';
+$toSmallDesc: '(max-width: 1920px)';
+$retina: '(min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx)';
+
+@mixin respond-to($media) {
+  @media screen and #{$media} {
+    @content;
+  }
+}
+
+//colors
+$brand1: #4300D1;
+$brand2: #002BCD;
+$brand3: #2567D1;
+$brand4: #60C3D5;
+//gray
+$black: #000;
+$white: #fff;
+$textBlack: #252525;
+$textDefault: #BFBFBF;
+$background: #F5F4F4;
+
+//text styles
+$raleway: 'Raleway', sans-serif;
+
+%h1{
+  font-family: $raleway;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.25em;
+  line-height: normal;
+  text-transform: uppercase;
+}
+%h2{
+  font-family: $raleway;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: normal;
+}
+%h3{
+  font-family: $raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: normal;
+}
+%h6{
+  font-family: $raleway;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 42px;
+  text-transform: uppercase;
+}
+%mainText{
+  font-family: $raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: normal;
+}
+%menuText{
+  font-family: $raleway;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: normal;
+}
+%infoText{
+  font-family: $raleway;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: normal;
+}
+%infoSmallText{
+  font-family: $raleway;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: normal;
+}
+%buttonText{
+  font-family: $raleway;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: normal;
+}
