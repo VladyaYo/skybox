@@ -8,14 +8,14 @@ import SliderSmallCard from "../components/SliderSmallCard";
 import TestimonialsSlider from "../components/TestimonialsSlider";
 import PricingCard from "../components/PricingCard";
 import FullScreenTabs from "../components/FullScreenTabs";
-import News from "../components/News"
+import News from "../components/News";
+import TwitterFeed from "../components/TwitterFeed"
 //content
 import bgfirstscreen from '../assets/img/bgmain.jpg';
 import bgGetFree from '../assets/img/bgGetFree.jpg';
 import bgTestimonials from '../assets/img/bgTestimonials.svg';
 
 import pagesData from "../assets/data/datatext"
-
 
 const Container = styled.div`
 max-width: 1170px;
@@ -191,6 +191,7 @@ background-repeat: no-repeat;
 background-size: cover;
 & >.carousel{
 width: 570px;
+max-width: 80%;
 margin: 50px auto;
 position: relative;
 & > button{
@@ -222,6 +223,9 @@ position:relative;
 margin: 120px auto 100px;
 `;
 const NewsSection = styled.section`
+
+`;
+const TwitterSection = styled.section`
 
 `;
 
@@ -265,15 +269,14 @@ const Home = props => {
                <Container justifystart>
                    {pagesData.homeData.pricing.map((item, index)=>{
                        return(
-                               <PricingCard
-                                   index={index}
-                                   key={index}
-                                   heading={item.heading}
-                                   about={item.about}
-                                   priceText={item.priceText}
-                                   price={item.price}
-                                   button={item.button}
-                               />
+                           <PricingCard
+                               index={index}
+                               key={index}
+                               heading={item.heading}
+                               about={item.about}
+                               price={item.price}
+                               button={item.button}
+                           />
                        )
                    })}
                </Container>
@@ -282,9 +285,16 @@ const Home = props => {
                <FullScreenTabs/>
            </TabsSection>
            <NewsSection>
-               <News/>
+               <Container>
+                   <News/>
+               </Container>
            </NewsSection>
+           <TwitterSection>
+               <Container>
+                <TwitterFeed/>
+               </Container>
+           </TwitterSection>
        </main>
     )
 };
-export default Home
+export default Home;

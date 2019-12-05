@@ -28,7 +28,17 @@ display: flex;
 flex-flow: row wrap;
 justify-content: center;
 align-items: center;
-border: 3px solid ${props => props.selected ? "red" : "#eee"};
+border: 3px solid ${vars.colors.black};
+cursor: pointer;
+background-size: cover;
+background-repeat: no-repeat;
+transition: .3s ease all;
+img{
+border-radius: 8px;
+}
+&.react-tabs__tab--selected{
+border: 3px solid ${vars.colors.brand1};
+}
 p{
 font-family: ${vars.fonts.releway};
 font-style: normal;

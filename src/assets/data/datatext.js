@@ -9,6 +9,9 @@ import btnBg1 from "../img/buttonTabBg1.jpg"
 import btnBg2 from "../img/buttonTabBg2.jpg"
 import btnBg3 from "../img/buttonTabBg3.jpg"
 import tab1bg from "../img/bgTab1.jpg"
+import imgNews1 from "../img/newsImage1.jpg"
+import imgNews2 from "../img/imageNews2.jpg"
+import logocs from "../img/logocsgotransparent.png"
 
 const pagesData = {
         homeData:{
@@ -126,7 +129,7 @@ const pagesData = {
                 {
                     heading:"Organizations",
                     about:"Integrated tools for player & team development across all levels",
-                    price: 42,
+                    price: 60,
                     button: "get started"
                 },
                 {
@@ -161,18 +164,86 @@ const pagesData = {
             ],
             news:[
                 {
-                    img:"",
+                    img: imgNews1,
                     title: "Skybox Technologies to test machine learning at BLAST Pro Series in 2020",
                     text: "The CS:GO.ai initiative is comprised of two competitions: one with a $5,000 (£3,859) reward for the team with the best code, and another for the top five participating teams which earns them an invitation to BLAST Pro Series in Copenhagen to run their code during matches. The winner of the latter will be announced before the grand final.",
                     link: "https://esportsinsider.com/2019/11/skybox-machine-learning-competition/"
                 },
                 {
-                    img:"",
+                    img:imgNews2,
                     title: "Skybox co-founder wants to “empower” the parents of CS:GO players",
                     text: "The Australian, who previously managed Tuchmeow Studios, a mobile game development company based in Denmark, spent months researching the esports industry with his colleagues, trying to find out where the gaps were. After eight months of solid work, Project Battle Stats was born, designed to empower teachers and players alike by providing them with all the tools necessary to grasp and properly analyse the skills needed to play one of the...",
                     link: "https://www.theloadout.com/csgo/skybox-technologies"
                 }
-            ]
+            ],
+            footer:{
+                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut diam",
+                madeBy: "made by ein-de-ein",
+                right: "©SKYBOX2019",
+
+            }
         },
+        csgoPage:{
+            firstScreen:{
+                image: logocs ,
+                subheading: "Experience CS:GO like never before! Visualize, Analyse, Excel – The world’s best CS:GO teams use Skybox",
+                button: "GET SKYBOX FOR FREE",
+
+            },
+            infoBlock:{
+                text:"The Skybox platform integrates a set of powerful tools to let you analyse gameplay, pinpoint critical improvement areas and find your winning edge in",
+                bold: " Counterstrike: Global Offensive!",
+            },
+            tabs:[
+                {
+                    button: "Players, Teams & Coaches",
+                    heading:"Skybox 3D Viewer",
+                    subheading:"A superpowered platform to take your CS:GO game to new levels!",
+                    subheading2:"Go deep into played matches! (or just use Skybox to watch your frag highlights from a completely different perspective!)",
+                    block:[
+                        {
+                            image: "",
+                            heading: "",
+                            text: ""
+                        },
+                        {
+                            image: "",
+                            heading: "",
+                            text: ""
+                        }
+                    ],
+                },
+                {
+                    button: "Organisations",
+                    block:[
+                        {
+                            image: "",
+                            heading: "",
+                            text: ""
+                        },
+                        {
+                            image: "",
+                            heading: "",
+                            text: ""
+                        }
+                    ],
+                },
+                {
+                    button: "Tournaments & Broadcasters",
+                    block:[
+                        {
+                            image: "",
+                            heading: "elmf;w",
+                            text: ""
+                        },
+                        {
+                            image: "",
+                            heading: "",
+                            text: ""
+                        }
+                    ],
+                }
+            ]
+        }
     }
 export default pagesData;

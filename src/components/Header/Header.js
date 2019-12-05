@@ -207,9 +207,9 @@ const Header = props => {
                             </NavLink>
                         </li>
                         <DropDown className="menu-item menu-dropdown">
-                            <span className="menu-link">
+                            <Link to={`/pricing-player/`} className="menu-link">
                                 Pricing
-                            </span>
+                            </Link>
                             <DropList>
                                 <li className="submenu-item">
                                     <Link className="submenu-link" to={`/pricing-player/`}>

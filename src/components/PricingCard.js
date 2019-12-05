@@ -11,7 +11,7 @@ import vars from "../assets/styles/varsStyles";
 
 const Item = styled.div`
 max-width: 240px;
-min-height: 307px;
+min-height: 277px;
 display: flex;
 flex-flow: column wrap;
 justify-content: space-between;
@@ -22,7 +22,7 @@ padding: 15px;
 background-color: #F5F4F4;
 background-image: url("${bg1}");
 background-repeat: no-repeat;
-background-size: cover;
+background-size: contain;
 border-radius: 8px;
 h2{
 text-transform: capitalize;

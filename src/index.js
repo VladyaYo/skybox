@@ -20,6 +20,7 @@ import Blog from "./pages/Blog";
 import Player from "./pages/Player";
 import Team from "./pages/Team";
 import Tournament from "./pages/Tournament";
+import Pricing from "./pages/Pricing";
 // import HotPanel from "./partials/HotPanel/HotPanel";
 // import AnchorScroll from "./partials/AnchorScroll";
 
@@ -34,6 +35,7 @@ const routes = (
             <Route exact path="/cs-go" component={CsGo} />
             <Route exact path="/pricing-tournament" component={Tournament} />
             <Route exact path="/pricing-team" component={Team} />
+            <Route exact path="/pricing" component={Pricing} />
             <Route exact path="/pricing-player" component={Player} />
             <Route exact path="/blog" component={Blog} />
             {/*<Route exact path="/download" component={Download} />*/}
