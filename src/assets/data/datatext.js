@@ -3,7 +3,7 @@ import logo2 from "../img/logoTeams/Group384.png";
 import logo3 from "../img/logoTeams/images1.png";
 import logo4 from "../img/logoTeams/Team_Liquidlogo_square1.png";
 import logo5 from "../img/logoTeams/Freaks-4U.png";
-import navi from "../img/NAVI_logo.png";
+import naviLogo from "../img/NAVI_logo.png";
 import photo1 from "../img/Group 330.jpg";
 import btnBg1 from "../img/buttonTabBg1.jpg"
 import btnBg2 from "../img/buttonTabBg2.jpg"
@@ -85,28 +85,28 @@ const pagesData = {
             testimonials:[
                 {
                     photo: photo1,
-                    logo: navi,
+                    logo: naviLogo,
                     name:"Sean Gares",
                     info:"Professional CS:GO Player and Analyst",
                     testimonial:"Skybox has the ability to revolutionize Counter-Strike analytics on multiple fronts.  As a broadcast tool, desk segments will have access to easy to digest overview replays.  New viewers, especially at large events like majors, will appreciate the visual aid of a tool like Skybox.  More importantly, Skybox has potential to improve teamwork and development...  Recognizing patterns, or how your opponent reacts, has never been easier"
                 },
                 {
                     photo: photo1,
-                    logo: navi,
+                    logo: naviLogo,
                     name:"Sean Gares",
                     info:"Professional CS:GO Player and Analyst",
                     testimonial:"Skybox has the ability to revolutionize Counter-Strike analytics on multiple fronts.  As a broadcast tool, desk segments will have access to easy to digest overview replays.  New viewers, especially at large events like majors, will appreciate the visual aid of a tool like Skybox.  More importantly, Skybox has potential to improve teamwork and development...  Recognizing patterns, or how your opponent reacts, has never been easier"
                 },
                 {
                     photo: photo1,
-                    logo: navi,
+                    logo: naviLogo,
                     name:"Sean Gares",
                     info:"Professional CS:GO Player and Analyst",
                     testimonial:"Skybox has the ability to revolutionize Counter-Strike analytics on multiple fronts.  As a broadcast tool, desk segments will have access to easy to digest overview replays.  New viewers, especially at large events like majors, will appreciate the visual aid of a tool like Skybox.  More importantly, Skybox has potential to improve teamwork and development...  Recognizing patterns, or how your opponent reacts, has never been easier"
                 },
                 {
                     photo: photo1,
-                    logo: navi,
+                    logo: naviLogo,
                     name:"Sean Gares",
                     info:"Professional CS:GO Player and Analyst",
                     testimonial:"Skybox has the ability to revolutionize Counter-Strike analytics on multiple fronts.  As a broadcast tool, desk segments will have access to easy to digest overview replays.  New viewers, especially at large events like majors, will appreciate the visual aid of a tool like Skybox.  More importantly, Skybox has potential to improve teamwork and development...  Recognizing patterns, or how your opponent reacts, has never been easier"
@@ -199,32 +199,57 @@ const pagesData = {
                     button: "Players, Teams & Coaches",
                     heading:"Skybox 3D Viewer",
                     subheading:"A superpowered platform to take your CS:GO game to new levels!",
-                    subheading2:"Go deep into played matches! (or just use Skybox to watch your frag highlights from a completely different perspective!)",
+                    bold:"Go deep into played matches!",
+                    subheading2:" (or just use Skybox to watch your frag highlights from a completely different perspective!)",
                     block:[
                         {
-                            image: "",
-                            heading: "",
-                            text: ""
+                            image: imgNews1,
+                            heading: "Context Matters!",
+                            text: "Review matches in full 3D from any perspective including RTS, POV or free fly modes; glassify buildings and find out where and how to position the perfect nades."
                         },
                         {
-                            image: "",
-                            heading: "",
-                            text: ""
-                        }
+                            image: imgNews1,
+                            heading: "Overlays fuel insights:",
+                            text: "Apply Field of View (FOV), Nade Blast, Fog of War and other overlays to go deep inside executes; Learn from mistakes and construct the perfect attack."
+                        },
+                        {
+                            image: imgNews1,
+                            heading: "Overlays fuel insights:",
+                            text: "Apply Field of View (FOV), Nade Blast, Fog of War and other overlays to go deep inside executes; Learn from mistakes and construct the perfect attack."
+                        },
+                        {
+                            image: imgNews1,
+                            heading: "Overlays fuel insights:",
+                            text: "Apply Field of View (FOV), Nade Blast, Fog of War and other overlays to go deep inside executes; Learn from mistakes and construct the perfect attack."
+                        },
+                        {
+                            image: imgNews1,
+                            heading: "Overlays fuel insights:",
+                            text: "Apply Field of View (FOV), Nade Blast, Fog of War and other overlays to go deep inside executes; Learn from mistakes and construct the perfect attack."
+                        },
+                        {
+                            mainHeading:"mainHeading"
+                        },
                     ],
                 },
                 {
                     button: "Organisations",
+                    subheading: `Multiple teams or many players to manage? <span>Sky Suite</span> is for you!`,
                     block:[
                         {
-                            image: "",
-                            heading: "",
-                            text: ""
+                            image: imgNews1,
+                            heading: "Simple management!",
+                            text: "Assign roles & permissions to organizational members, seamlessly manage players and teams and gain insight into your organization’s performance."
                         },
                         {
-                            image: "",
-                            heading: "",
-                            text: ""
+                            image: imgNews1,
+                            heading: "Powerful suite of tools!",
+                            text: "Organization members can access the Skybox player, team and coaching tools to propel progression. "
+                        },
+                        {
+                            image: imgNews1,
+                            heading: "Recruit the next stars!",
+                            text: "Invite free agents into your organization to track their performance and monitor improvements",
                         }
                     ],
                 },
@@ -232,14 +257,14 @@ const pagesData = {
                     button: "Tournaments & Broadcasters",
                     block:[
                         {
-                            image: "",
-                            heading: "elmf;w",
-                            text: ""
+                            image: imgNews1,
+                            heading: "Recruit the next stars!",
+                            text: "Invite free agents into your organization to track their performance and monitor improvements",
                         },
                         {
-                            image: "",
-                            heading: "",
-                            text: ""
+                            image: imgNews1,
+                            heading: "Recruit the next stars!",
+                            text: "Invite free agents into your organization to track their performance and monitor improvements",
                         }
                     ],
                 }

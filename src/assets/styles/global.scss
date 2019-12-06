@@ -59,6 +59,17 @@
   font-weight: 900;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-Bold.eot');
+  src: url('../fonts/Raleway-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Raleway-Bold.woff2') format('woff2'),
+  url('../fonts/Raleway-Bold.woff') format('woff'),
+  url('../fonts/Raleway-Bold.ttf') format('truetype'),
+  url('../fonts/Raleway-Bold.svg#Raleway-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
 //text-style
 body{
   font-family: $raleway;
