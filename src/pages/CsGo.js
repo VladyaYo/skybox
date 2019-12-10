@@ -11,7 +11,7 @@ import bginfoBlock from "../assets/img/bgtextBlock.svg";
 
 const Container = styled.div`
 max-width: 1170px;
-width: 100%;
+width: 90%;
 margin: auto;
 display: flex;
 flex-flow: ${props => props.row ? "column" : "row"} wrap;

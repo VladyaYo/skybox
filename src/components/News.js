@@ -22,7 +22,13 @@ border-radius: 10px;
 background-color: ${vars.colors.white};
 min-height: 533px;
 box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.1);
-h5{
+ @media (max-width: ${vars.size.laptop}) {
+ margin: 30px auto;
+ }
+ h5{
+ max-width: 90%;
+ margin: 10px auto;
+ }
 font-weight: 600;
 font-size: 18px;
 line-height: normal;

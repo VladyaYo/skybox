@@ -134,6 +134,7 @@ const FullScreenTabs = props => {
             </TabsButtons>
             {pagesData.homeData.tabs.map((item, index)=>{
                 return(
+
                     <TabPanel
                         index={index}
                         key={index}

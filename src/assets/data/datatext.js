@@ -152,14 +152,14 @@ const pagesData = {
                     tabButtonBg: btnBg2,
                     span: "The Analytics Portal",
                     text: " gives you the information you need to win!",
-                    bg: tab1bg
+                    bg: imgNews1
                 },
                 {
                     tabButtonText: "Next Gen Broadcasts",
                     tabButtonBg: btnBg3,
                     span: "Get the Skybox",
                     text: " toolbox to take event broadcasts to the next level!",
-                    bg: tab1bg
+                    bg: imgNews1
                 }
             ],
             news:[

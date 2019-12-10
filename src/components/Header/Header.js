@@ -23,6 +23,9 @@ const Nav = styled.nav`
  max-width: 1173px;
  width: 100%;
  margin: 10px auto;
+ @media (max-width: ${vars.size.laptop}) {
+ width: 90%;
+ }
 `;
 const LinkList = styled.ul`
 width: 100%;
@@ -32,6 +35,9 @@ display: flex;
  align-items: center;
  justify-content: space-between;
  margin-left: 200px;
+ @media (max-width: ${vars.size.laptop}) {
+ margin-left: 5%;
+ }
  & > li{
  & > a{
  color: #ffffff;

@@ -19,12 +19,13 @@ import pagesData from "../assets/data/datatext"
 
 const Container = styled.div`
 max-width: 1170px;
-width: 100%;
+width: 90%;
 margin: auto;
 display: flex;
 flex-flow: ${props => props.row ? "column" : "row"} wrap;
 justify-content: ${props => props.justifystart ? "space-between" : "center"};
 align-items: ${props => props.alignStart ? "center" : "flex-start"};
+
 `;
 const FirstScreen = styled.section`
 background-image: url("${bgfirstscreen}");
@@ -92,7 +93,7 @@ margin: 30px 0;
 `;
 const GetFree = styled.section`
 background-image: url("${bgGetFree}");
-background-position: right;
+background-position: right ;
 background-repeat: no-repeat;
 max-width: 1920px;
 margin: auto;
@@ -101,6 +102,9 @@ min-height: 400px;
 display: flex;
 justify-content: center;
 align-items: center;
+@media (max-width: ${vars.size.laptop}) {
+background-position: -130%;
+}
 `;
 const Text = styled.div`
 display: flex;
@@ -109,6 +113,9 @@ justify-content: space-between;
 align-items: flex-start;
 max-width: 439px;
 width: 90%;
+@media (max-width: ${vars.size.laptop}) {
+max-width: 390px;
+}
 & > h2{
 color: ${vars.colors.brand1};
 }
