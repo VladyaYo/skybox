@@ -212,10 +212,8 @@ const TabsCs = props => {
                                             null
                                         }
                                     </Main>
-                            <TransitionGroup className="blocks">
                                 {item.block && item.block.map((item2, index)=>{
                                     return(
-                                        <CSSTransition key={index} timeout={200} classNames="option">
                                             <Block
                                                 index={index}
                                             >
@@ -232,9 +230,7 @@ const TabsCs = props => {
                                                     { item2.text ? <p>{item2.text}</p> : null }
                                                 </div> )}
                                             </Block>
-                                        </CSSTransition>
                                 )})}
-                            </TransitionGroup>
                         </TabPanel>
                     )})}
             </Tabs>

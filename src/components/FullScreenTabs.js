@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import styled from "styled-components";
+import {TransitionGroup, CSSTransition} from "react-transition-group";
 // import 'react-tabs/style/react-tabs.css';
 
 
@@ -109,7 +110,7 @@ text-align: center;
 text-transform: uppercase;
 color: ${vars.colors.white};
 margin-top: 40px;
-`
+`;
 
 
 const FullScreenTabs = props => {
@@ -132,27 +133,35 @@ const FullScreenTabs = props => {
                     })}
                 </TabList>
             </TabsButtons>
+            <TransitionGroup>
             {pagesData.homeData.tabs.map((item, index)=>{
                 return(
-
-                    <TabPanel
-                        index={index}
-                        key={index}
-                        span={item.span}
-                        text={item.text}
-                        style={{
-                            backgroundImage: `url('${item.bg}')`
-                        }}
+                  <TabPanel
+                      index={index}
+                      key={index}
+                  >
+                    <CSSTransition
+                      classNames="page"
+                      timeout={200}
+                      in={true}
                     >
+                      <div
+                        style={{
+                          backgroundImage: `url('${item.bg}')`
+                        }}
+                      >
                         <Container>
-                            <Content>
-                                <p><span><strong>{item.span}</strong></span>{item.text}</p>
-                                <a href="/">learn more</a>
-                            </Content>
+                          <Content>
+                            <p><span><strong>{item.span}</strong></span>{item.text}</p>
+                            <a href="/">learn more</a>
+                          </Content>
                         </Container>
-                    </TabPanel>
+                      </div>
+                    </CSSTransition>
+                  </TabPanel>
                 )
             })}
+            </TransitionGroup>
         </Tabs>
     )
 };
