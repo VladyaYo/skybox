@@ -3,6 +3,8 @@ import {Link} from "react-router-dom";
 import styled from "styled-components";
 
 import vars from "../assets/styles/varsStyles";
+import {device}  from "../assets/styles/mediaVars";
+
 //components
 import SliderSmallCard from "../components/SliderSmallCard";
 import TestimonialsSlider from "../components/TestimonialsSlider";
@@ -26,6 +28,7 @@ flex-flow: ${props => props.row ? "column" : "row"} wrap;
 justify-content: ${props => props.justifystart ? "space-between" : "center"};
 align-items: ${props => props.alignStart ? "center" : "flex-start"};
 
+
 `;
 const FirstScreen = styled.section`
 background-image: url("${bgfirstscreen}");
@@ -45,6 +48,11 @@ width: 90%;
 max-width: 546px;
 color: #ffffff;
 margin-top: 235px;
+p{
+@media ${device.tablet} {
+max-width: 70%;
+}
+}
 & > h1{
 & > span{
 position: relative;
@@ -223,7 +231,9 @@ position: relative;
 }
 `;
 const PricingSection = styled.section`
-
+${Container}{
+width: 80%;
+}
 `;
 const TabsSection = styled.section`
 position:relative;
@@ -234,6 +244,23 @@ const NewsSection = styled.section`
 `;
 const TwitterSection = styled.section`
 
+`;
+const TwitterLink = styled.a`
+border: 1px solid #4300D1;
+box-sizing: border-box;
+border-radius: 4px;
+width: 220px;
+height: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: auto;
+color: ${vars.colors.brand1};
+transition: .3s ease all;
+&:hover{
+color: ${vars.colors.white};
+background-color: ${vars.colors.brand1};
+}
 `;
 
 const Home = props => {
@@ -300,6 +327,7 @@ const Home = props => {
                <Container>
                 <TwitterFeed/>
                </Container>
+               <TwitterLink target="_blank" href="https://twitter.com/skybox">See all</TwitterLink>
            </TwitterSection>
        </main>
     )

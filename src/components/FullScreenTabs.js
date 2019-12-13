@@ -7,6 +7,7 @@ import {TransitionGroup, CSSTransition} from "react-transition-group";
 
 import pagesData from "../assets/data/datatext";
 import vars from "../assets/styles/varsStyles";
+import {device} from "../assets/styles/mediaVars"
 
 const TabsButtons = styled.div`
 position: absolute;
@@ -66,6 +67,9 @@ min-height: 674px;
 const Content = styled.div`
 width: 90%;
 max-width: 402px;
+ @media ${device.tablet} {
+ max-width:300px;
+ }
 p{
 text-align: left;
 color: ${vars.colors.white};
@@ -114,6 +118,7 @@ margin-top: 40px;
 
 
 const FullScreenTabs = props => {
+    const [inProp, setInProp] = useState(false);
     return (
         <Tabs>
             <TabsButtons>
@@ -126,6 +131,7 @@ const FullScreenTabs = props => {
                                 style={{
                                     backgroundImage: `url('${item.tabButtonBg}')`
                                 }}
+                                onClick={() => setInProp(true)}
                             >
                                 <p>{item.tabButtonText}</p>
                             </Tab>
@@ -141,9 +147,9 @@ const FullScreenTabs = props => {
                       key={index}
                   >
                     <CSSTransition
-                      classNames="page"
                       timeout={200}
-                      in={true}
+                      in={inProp}
+                      classNames="page"
                     >
                       <div
                         style={{

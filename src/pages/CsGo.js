@@ -7,6 +7,7 @@ import vars from "../assets/styles/varsStyles";
 import pagesData from "../assets/data/datatext";
 import bgfirstscreen from "../assets/img/bgcsgoMain.jpg";
 import bginfoBlock from "../assets/img/bgtextBlock.svg";
+// import {device} from "../assets/styles/mediaVars";
 
 
 const Container = styled.div`

@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { TransitionGroup, CSSTransition} from 'react-transition-group';
+// import { TransitionGroup, CSSTransition} from 'react-transition-group';
 import pagesData from "../assets/data/datatext";
 import vars from "../assets/styles/varsStyles";
+import {device} from "../assets/styles/mediaVars";
 //images
 import decor1 from "../assets/img/decorPhoto1.svg"
 import decor2 from "../assets/img/decorPhoto2.svg"
@@ -35,6 +36,9 @@ line-height: 28px;
 text-align: center;
 color: ${vars.colors.brand1};
 transition: .2s ease all;
+@media ${device.tablet}{
+margin:20px auto 0;
+}
 &.react-tabs__tab--selected{
 background-color: ${vars.colors.brand1};
 color: ${vars.colors.white};
@@ -185,8 +189,8 @@ const TabsCs = props => {
                     {tabs.map((item, index)=>{
                         return(
                             <Tab
-                                index={index}
                                 key={index}
+                                index={index}
                             >
                                 {item.button}
                             </Tab>
@@ -195,8 +199,9 @@ const TabsCs = props => {
                 {tabs.map((item, index)=>{
                     return(
                         <TabPanel
-                        index={index}
-                        key={index}
+                            key={index}
+                            index={index}
+
                             >
                                     <Main>
                                         { item.subheading ?
@@ -216,6 +221,7 @@ const TabsCs = props => {
                                     return(
                                             <Block
                                                 index={index}
+                                                key={index}
                                             >
                                             { item2.mainHeading ?
                                                 <h2>{item2.mainHeading}</h2>:

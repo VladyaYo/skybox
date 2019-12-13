@@ -7,6 +7,7 @@ import bg2 from "../assets/img/base2.svg"
 import bg3 from "../assets/img/base3.svg"
 import bg4 from "../assets/img/base4.svg"
 import vars from "../assets/styles/varsStyles";
+import {device} from "../assets/styles/mediaVars";
 
 
 const Item = styled.div`
@@ -24,6 +25,9 @@ background-image: url("${bg1}");
 background-repeat: no-repeat;
 background-size: contain;
 border-radius: 8px;
+@media ${device.tablet}{
+margin: 20px auto;
+}
 h2{
 text-transform: capitalize;
 }

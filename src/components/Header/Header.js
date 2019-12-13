@@ -5,6 +5,7 @@ import Logo from "../Logo/Logo";
 import styled from "styled-components";
 
 import vars from "../../assets/styles/varsStyles"
+import {device} from "../../assets/styles/mediaVars";
 
 const ContainerHeader = styled.header`
 background-color: rgba(67, 0, 209, 0.6);
@@ -13,7 +14,48 @@ flex-flow: row;
 justify-content: space-between;
 align-items: center;
 z-index: 100;
-position:relative;
+position: absolute;
+width: 100%;
+.header-burger{
+width: 34px;
+height: 24px;
+position: absolute;
+right: 5%;
+display: none;
+top: 23px;
+z-index: 120;
+span{
+position:absolute;
+width: 100%;
+height: 3px;
+transition: .4s ease all;
+background-color: ${vars.colors.white};
+&:nth-child(1){
+top: 0;
+}
+&:nth-child(2){
+top: 48%;
+}
+&:nth-child(3){
+top: 96%;
+}
+}
+&.open{
+span{
+&:nth-child(1){
+transform: rotate(45deg);
+top: 11px;}
+&:nth-child(2){
+transform: rotate(-45deg);
+}
+&:nth-child(3){
+width: 0}
+}
+}
+@media ${device.tablet}{
+display: block;
+}
+}
 `;
 const Nav = styled.nav`
  display: flex;
@@ -23,9 +65,33 @@ const Nav = styled.nav`
  max-width: 1173px;
  width: 100%;
  margin: 10px auto;
+ position: relative;
+ min-height: 60px;
+ opacity: 0;
+ z-index: -1;
+ transition: .4s ease all;
+ &.open{
+ height: 100vh;
+  opacity: 1;
+ z-index: 100;
+ }
  @media (max-width: ${vars.size.laptop}) {
  width: 90%;
  }
+   @media ${device.tablet}{
+  flex-flow: column wrap;
+  
+  }
+  .logo{
+   @media ${device.tablet}{
+   position: absolute;
+   left:0;
+   }
+  }
+  .wrapper{
+  position: absolute;
+  top: 70px;
+  }
 `;
 const LinkList = styled.ul`
 width: 100%;
@@ -35,13 +101,21 @@ display: flex;
  align-items: center;
  justify-content: space-between;
  margin-left: 200px;
- @media (max-width: ${vars.size.laptop}) {
+ @media ${device.laptop} {
  margin-left: 5%;
  }
+ @media ${device.tablet}{
+flex-flow: column wrap;
+margin: auto;
+ }
  & > li{
+  @media ${device.tablet}{
+  margin: 30px auto;
+  }
+ 
  & > a{
  color: #ffffff;
-  font-family: ${vars.fonts.releway};
+ font-family: ${vars.fonts.releway};
 font-style: normal;
 font-weight: 500;
 font-size: 16px;
@@ -170,16 +244,10 @@ const Header = props => {
         'header-nav',
         isMenuOpen ? 'open' : null
     ];
-    const overlayClasses = [
-        'overlay',
-        isMenuOpen ? 'open' : null
-    ];
     const onBurgerClick = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-    const onOverlayClick = () => {
-        setIsMenuOpen(false);
-    };
+
     return (
         <ContainerHeader className="header">
                 <div
@@ -192,6 +260,7 @@ const Header = props => {
                 </div>
                 <Nav as="nav" className={menuClasses.join(' ')}>
                     <Logo></Logo>
+                    <div className="wrapper">
                     <LinkList className="menu header-menu">
                         <li className="menu-item">
                             <NavLink
@@ -252,11 +321,8 @@ const Header = props => {
                         Sign Up
                     </Button>
                     </Buttons>
+                    </div>
                 </Nav>
-                <div
-                    className={overlayClasses.join(' ')}
-                    onClick={onOverlayClick}
-                />
         </ContainerHeader>
     );
 }

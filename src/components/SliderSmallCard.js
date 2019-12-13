@@ -9,7 +9,7 @@ const SliderSmallCard = props => {
     return (
         <CarouselProvider
             visibleSlides={5}
-            totalSlides={(pagesData.homeData.trustedBy.length)+1}
+            totalSlides={(pagesData.homeData.trustedBy.length)+4}
             step={1}
             naturalSlideWidth={270}
             naturalSlideHeight={330}
