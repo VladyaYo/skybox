@@ -4,9 +4,9 @@ import styled from "styled-components";
 import vars from "../assets/styles/varsStyles";
 
 const Item = styled.div`
-width: 90%;
-max-width: 500px;
-min-height: 370px;
+//width: 90%;
+//max-width: 500px;
+//min-height: 370px;
 background-color: rgba(255, 255, 255, 0.9);
 margin: auto;
 padding: 40px;

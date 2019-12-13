@@ -14,6 +14,11 @@ position: absolute;
 left: 50px;
 top: 80px;
 z-index: 20;
+@media ${device.mobileL}{
+    top: 20px;
+    left: auto;
+    
+}
 ul{
 min-height: 468px;
 display: flex;
@@ -21,6 +26,12 @@ flex-flow: column wrap;
 justify-content: space-between;
 align-items: center;
 width: 90%;
+@media ${ device.mobileL }{
+  min-height: 268px;
+  flex-flow: row wrap;
+  width: 100%;
+  margin: auto;
+}
 }
 li{
 width: 340px; 
@@ -35,6 +46,11 @@ cursor: pointer;
 background-size: cover;
 background-repeat: no-repeat;
 transition: .3s ease all;
+@media ${device.mobileL}{
+    width: 170px;
+    height: 120px;
+        margin: auto;
+}
 img{
 border-radius: 8px;
 }
@@ -69,6 +85,9 @@ width: 90%;
 max-width: 402px;
  @media ${device.tablet} {
  max-width:300px;
+ }
+ @media ${device.mobileL}{
+ margin: 370px auto 30px;
  }
 p{
 text-align: left;

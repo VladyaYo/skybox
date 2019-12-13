@@ -11,11 +11,15 @@ import TestimonialsSlider from "../components/TestimonialsSlider";
 import PricingCard from "../components/PricingCard";
 import FullScreenTabs from "../components/FullScreenTabs";
 import News from "../components/News";
-import TwitterFeed from "../components/TwitterFeed"
+import TwitterFeed from "../components/TwitterFeed";
+import TestimonialSlick from "../components/TestimonialSlick";
 //content
 import bgfirstscreen from '../assets/img/bgmain.jpg';
 import bgGetFree from '../assets/img/bgGetFree.jpg';
 import bgTestimonials from '../assets/img/bgTestimonials.svg';
+import arrowsLeft from '../assets/img/arrowL.svg';
+import arrowsRight from '../assets/img/arrowR.svg';
+
 
 import pagesData from "../assets/data/datatext"
 
@@ -204,29 +208,20 @@ background-image: url("${bgTestimonials}");
 background-position: top center;
 background-repeat: no-repeat;
 background-size: cover;
-& >.carousel{
-width: 570px;
-max-width: 80%;
-margin: 50px auto;
-position: relative;
-& > button{
-    position: absolute;
-    top: 50%;
-    width: 10px;
-    height: 40px;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    transition: .4s ease all;
-     left: -30px;
-     padding: 0;
-    &:last-child{
-    left: auto;
-    right: -30px;
-    }
-    &[disabled]{
-   
-    }
+.slick-slider{
+width: 90%;
+max-width: 570px;
+margin: auto;
+
+}
+button{
+&:before{
+content: url("${arrowsLeft}");
+}
+&:last-child{
+&:before{
+content: url("${arrowsRight}");
+}
 }
 }
 `;
@@ -297,7 +292,8 @@ const Home = props => {
                </SliderWrap>
            </SliderSection>
            <TestimonialsSection>
-               <TestimonialsSlider/>
+               {/*<TestimonialsSlider/>*/}
+               <TestimonialSlick/>
            </TestimonialsSection>
            <PricingSection>
                <Container justifystart>

@@ -19,10 +19,35 @@ flex-flow: column wrap;
 justify-content: space-around;
 align-items: center;
 padding: 34px 0 20px;
+transition: .4s ease all;
+&:hover{
+p{
+height: auto;
+}
+a{
+height: auto;
+}
+h5{
+height: auto;
+}
+}
+h5{
+height: 0;
+transition: .4s ease all;
+overflow: hidden;
+}
 p{
 max-width: 85%;
 margin: auto;
 text-align: center;
+height: 0;
+overflow:hidden;
+transition: .4s ease all;
+}
+a{
+height: 0;
+overflow:hidden;
+transition: .4s ease all;
 }
 `;
 const WrapImg=styled.div`
@@ -35,7 +60,7 @@ min-height: 106px ;
 &>*{
 margin: auto;
 }
-`
+`;
 
 const Card = ({logo, title, description,link}) => {
     return (
