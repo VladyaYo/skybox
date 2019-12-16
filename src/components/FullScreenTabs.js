@@ -11,7 +11,7 @@ import {device} from "../assets/styles/mediaVars"
 
 const TabsButtons = styled.div`
 position: absolute;
-left: 50px;
+left: 7%;
 top: 80px;
 z-index: 20;
 @media ${device.mobileL}{
@@ -49,7 +49,7 @@ transition: .3s ease all;
 @media ${device.mobileL}{
     width: 170px;
     height: 120px;
-        margin: auto;
+    margin: auto;
 }
 img{
 border-radius: 8px;

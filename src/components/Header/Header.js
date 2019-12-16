@@ -8,14 +8,23 @@ import vars from "../../assets/styles/varsStyles"
 import {device} from "../../assets/styles/mediaVars";
 
 const ContainerHeader = styled.header`
-background-color: rgba(67, 0, 209, 0.6);
+//background-color: rgba(67, 0, 209, 0.6);
+background-color: ${vars.colors.brand1};
 display: flex; 
 flex-flow: row;
 justify-content: space-between;
 align-items: center;
 z-index: 100;
-position: absolute;
+//position: absolute;
+position: fixed;
+top: 0;
 width: 100%;
+ backdrop-filter: blur(0px);
+transition: .5s ease-in-out all;
+&.open{
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(14px);
+}
 .header-burger{
 width: 34px;
 height: 24px;
@@ -24,6 +33,10 @@ right: 5%;
 display: none;
 top: 23px;
 z-index: 120;
+
+@media ${device.tablet}{
+display: block;
+}
 span{
 position:absolute;
 width: 100%;
@@ -49,11 +62,9 @@ top: 11px;}
 transform: rotate(-45deg);
 }
 &:nth-child(3){
-width: 0}
+width: 0
 }
 }
-@media ${device.tablet}{
-display: block;
 }
 }
 `;
@@ -67,13 +78,28 @@ const Nav = styled.nav`
  margin: 10px auto;
  position: relative;
  min-height: 60px;
- opacity: 0;
+ opacity: 1;
  z-index: -1;
  transition: .4s ease all;
+ @media ${device.mobileL}{
+ margin:10px;
+ }
+
+ .wrapper{
+ opacity: 1;
+
+ }
  &.open{
  height: 100vh;
-  opacity: 1;
  z-index: 100;
+ .wrapper{
+  z-index: 100;
+  opacity: 1;
+  width: auto;
+  ul{
+      display: flex;
+      }
+ }
  }
  @media (max-width: ${vars.size.laptop}) {
  width: 90%;
@@ -89,8 +115,25 @@ const Nav = styled.nav`
    }
   }
   .wrapper{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+      width: 65%;
+       @media ${device.desktopL}{
+ width:75%;
+ }
+     @media ${device.tablet}{
   position: absolute;
   top: 70px;
+  opacity: 0; 
+    height:0;
+    z-index: -1;
+      width: 0;
+      ul{
+      display: none;
+      }
+  }
   }
 `;
 const LinkList = styled.ul`
@@ -100,9 +143,9 @@ display: flex;
  flex-flow: row wrap;
  align-items: center;
  justify-content: space-between;
- margin-left: 200px;
+ //margin-left: 200px;
  @media ${device.laptop} {
- margin-left: 5%;
+ //margin-left: 5%;
  }
  @media ${device.tablet}{
 flex-flow: column wrap;
@@ -151,6 +194,9 @@ const DropList = styled.ul`
   height: 0;
   background-color: rgba(67, 0, 209, 0.6);
   transition: .5s ease all;
+  @media ${device.tablet}{
+  display: none;
+  }
   & > li{
   margin: 10px auto;
   &:first-child{
@@ -207,26 +253,33 @@ display: flex;
  justify-content: space-between;
  max-width: 370px;
  width: 100%;
+ @media ${device.tablet}{
+ flex-flow: column;
+ margin: auto;
+ }
 `;
 const Button = styled.button`
- display: flex;
- flex-flow: row wrap;
- align-items: center;
- justify-content: center;
- border: 1px solid #FFFFFF;
-box-sizing: border-box;
-border-radius: 4px;
-background-color: transparent;
-width: 169px;
-height: 37px;
-font-family: ${vars.fonts.releway};
-color: #ffffff;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: transparent;
+  width: 169px;
+  height: 37px;
+  font-family: ${vars.fonts.releway};
+  color: #ffffff;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: normal;
   text-transform: uppercase;
   transition: .4s ease all;
+  @media ${device.tablet}{
+  margin: 30px auto 10px
+  }
   &:hover{
   cursor:pointer;
   background-color: rgba(0,0,0,.3);
@@ -240,6 +293,10 @@ const Header = props => {
         'header-burger',
         isMenuOpen ? 'open' : null
     ];
+    const headerClasses = [
+        'header',
+        isMenuOpen ? 'open' : null
+    ];
     const menuClasses = [
         'header-nav',
         isMenuOpen ? 'open' : null
@@ -247,9 +304,8 @@ const Header = props => {
     const onBurgerClick = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-
     return (
-        <ContainerHeader className="header">
+        <ContainerHeader className={headerClasses.join(' ')}>
                 <div
                     className={burgerClasses.join(' ')}
                     onClick={onBurgerClick}

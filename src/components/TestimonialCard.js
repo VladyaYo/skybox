@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 
+import {device} from "../assets/styles/mediaVars";
 import vars from "../assets/styles/varsStyles";
 
 const Item = styled.div`
@@ -10,7 +11,9 @@ const Item = styled.div`
 background-color: rgba(255, 255, 255, 0.9);
 margin: auto;
 padding: 40px;
-
+@media ${device.mobileL}{
+padding: 30px 10px;
+}
 `;
 const Top = styled.div`
 display: flex;

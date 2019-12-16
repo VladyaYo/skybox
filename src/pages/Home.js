@@ -7,7 +7,7 @@ import {device}  from "../assets/styles/mediaVars";
 
 //components
 import SliderSmallCard from "../components/SliderSmallCard";
-import TestimonialsSlider from "../components/TestimonialsSlider";
+// import TestimonialsSlider from "../components/TestimonialsSlider";
 import PricingCard from "../components/PricingCard";
 import FullScreenTabs from "../components/FullScreenTabs";
 import News from "../components/News";
@@ -212,7 +212,9 @@ background-size: cover;
 width: 90%;
 max-width: 570px;
 margin: auto;
-
+@media ${device.mobileL}{
+  width: 83%;
+}
 }
 button{
 &:before{

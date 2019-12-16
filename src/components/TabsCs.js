@@ -9,6 +9,7 @@ import {device} from "../assets/styles/mediaVars";
 import decor1 from "../assets/img/decorPhoto1.svg"
 import decor2 from "../assets/img/decorPhoto2.svg"
 import decor3 from "../assets/img/decorPhoto3.svg"
+import decor4 from "../assets/img/decorPhoto4.svg"
 
 
 const Container = styled.div`
@@ -113,10 +114,20 @@ max-width: 1170px;
     flex-direction: row-reverse;
     .imageWrapp{
      &:before{
-        content: url("${decor2}");
+        content: "";
         left: auto;
-        right: -58px;
+        right: -70px;
         top: -35px;
+        max-height: 100%;
+        width: 100%;
+        height: 130%;
+        background-image: url("${decor2}");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right top;
+        @media ${device.tablet}{
+        right: -5%;
+        }
       }
       img{
         position: absolute;
@@ -127,11 +138,21 @@ max-width: 1170px;
   &:nth-child(4n+4){
   .imageWrapp{
   &:before{
-    content: url("${decor3}");
-    right: auto;
-    left: -28px;
-    top: -28px;
-    position: absolute;
+    content: "";
+    
+        right: auto;
+        top: -28px;
+        left: -28px;
+        max-height: 100%;
+        width: 100%;
+        height: 130%;
+        background-image: url("${decor2}");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right top;
+        @media ${device.tablet}{
+        right: -5%;
+        }
   }
   }
 }
@@ -147,11 +168,20 @@ max-width: 1170px;
   position: relative;
   height: 290px;
   &:before{
-    content: url("${decor1}");
-    position:absolute;
-    left: -121px;
-    top: -72px;
-    z-index: -1;
+  content: "";
+        right: auto;
+        top: -72px;
+        left: -121px;
+        max-height: 100%;
+        width: 100%;
+        height: 130%;
+        background-image: url("${decor2}");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right top;
+        @media ${device.tablet}{
+        right: -5%;
+        }
   }
   img{
     min-height: 100%;
