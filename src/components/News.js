@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import pagesData from "../assets/data/datatext";
 import vars from "../assets/styles/varsStyles";
+import {device} from "../assets/styles/mediaVars";
 
 const NewsBlock = styled.div`
 display: flex;
@@ -22,8 +23,9 @@ border-radius: 10px;
 background-color: ${vars.colors.white};
 min-height: 533px;
 box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.1);
- @media (max-width: ${vars.size.laptop}) {
+ @media ${device.laptop} {
  margin: 30px auto;
+ max-width: 330px;
  }
  h5{
  max-width: 90%;

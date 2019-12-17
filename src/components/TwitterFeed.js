@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 
+
 const ContainerFeed = styled.div`
+width: 300px;
 .timeline-TweetList{
 display: flex;
 flex-flow: row wrap;
@@ -17,7 +19,7 @@ const TwitterFeed = () => {
         anchor.setAttribute("class", "twitter-timeline");
         anchor.setAttribute("data-theme", "white");
         anchor.setAttribute("align", "left");
-        anchor.setAttribute("data-tweet-limit", "2");
+        anchor.setAttribute("data-tweet-limit", "10");
         anchor.setAttribute("data-chrome", "noheader nofooter noborders");
         anchor.setAttribute("href", "https://twitter.com/skybox");
         document.getElementsByClassName("twitter-embed")[0].appendChild(anchor);

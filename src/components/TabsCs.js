@@ -37,7 +37,7 @@ line-height: 28px;
 text-align: center;
 color: ${vars.colors.brand1};
 transition: .2s ease all;
-@media ${device.tablet}{
+@media ${device.laptop}{
 margin:20px auto 0;
 }
 &.react-tabs__tab--selected{
@@ -49,6 +49,8 @@ color: ${vars.colors.white};
 `;
 const Main = styled.div`
 margin: 100px auto 30px;
+width: 90%;
+
 
 .legend{
 font-weight: 600;
@@ -139,20 +141,19 @@ max-width: 1170px;
   .imageWrapp{
   &:before{
     content: "";
-    
-        right: auto;
-        top: -28px;
-        left: -28px;
-        max-height: 100%;
-        width: 100%;
-        height: 130%;
-        background-image: url("${decor2}");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: right top;
-        @media ${device.tablet}{
+    right: auto;
+    top: -28px;
+    left: -28px;
+    max-height: 100%;
+    width: 100%;
+    height: 130%;
+    background-image: url("${decor2}");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right top;
+    @media ${device.tablet}{
         right: -5%;
-        }
+    }
   }
   }
 }

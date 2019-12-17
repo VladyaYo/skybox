@@ -12,6 +12,7 @@ import PricingCard from "../components/PricingCard";
 import FullScreenTabs from "../components/FullScreenTabs";
 import News from "../components/News";
 import TwitterFeed from "../components/TwitterFeed";
+import TwitterFeed2 from "../components/TwitterFeed2";
 import TestimonialSlick from "../components/TestimonialSlick";
 //content
 import bgfirstscreen from '../assets/img/bgmain.jpg';
@@ -230,6 +231,18 @@ content: url("${arrowsRight}");
 const PricingSection = styled.section`
 ${Container}{
 width: 80%;
+& > div{
+margin: 10px auto;
+}
+}
+${Container}{
+@media ${device.laptop}{
+width: 60%;
+}}
+${Container}{
+@media ${device.tablet}{
+width: 80%
+}
 }
 `;
 const TabsSection = styled.section`
@@ -241,6 +254,12 @@ const NewsSection = styled.section`
 `;
 const TwitterSection = styled.section`
 
+`;
+const Feed = styled.div`
+margin: 50px 20px;
+max-width: 570px;
+overflow-x: scroll;
+    height: 500px;
 `;
 const TwitterLink = styled.a`
 border: 1px solid #4300D1;
@@ -271,9 +290,9 @@ const Home = props => {
                     <h1><span><strong>{firstScreen.h1span}</strong></span>{firstScreen.h1}</h1>
                     <p className="first">{firstScreen.subheading1}</p>
                     <p>{firstScreen.subheading2}</p>
-                    <Link to={`download`}>
-                        {firstScreen.button}
-                    </Link>
+                    {/*<Link to={`download`}>*/}
+                    {/*    {firstScreen.button}*/}
+                    {/*</Link>*/}
                 </MainTextBlock>
             </Container>
         </FirstScreen>
@@ -323,9 +342,16 @@ const Home = props => {
            </NewsSection>
            <TwitterSection>
                <Container>
-                <TwitterFeed/>
+                   <Feed>
+                       <TwitterFeed/>
+                       <TwitterLink target="_blank" href="https://twitter.com/skybox">See all</TwitterLink>
+                   </Feed>
+                   <Feed>
+                       <TwitterFeed2/>
+                       <TwitterLink target="_blank" href="https://twitter.com/skybox">See all</TwitterLink>
+                   </Feed>
                </Container>
-               <TwitterLink target="_blank" href="https://twitter.com/skybox">See all</TwitterLink>
+
            </TwitterSection>
        </main>
     )

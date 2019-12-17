@@ -60,6 +60,11 @@ font-size: 0.750em;
 line-height: 1;
 text-align: center;
 text-transform: uppercase;
+transition: .4s ease all;
+&:hover{
+color: ${vars.colors.white};
+background-color: ${vars.colors.brand1};
+}
 }
 `;
 const Price = styled.p`

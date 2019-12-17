@@ -29,6 +29,7 @@ const TestimonialSlick = props => {
             {pagesData.homeData.testimonials.map((item, index)=>{
                 return(
                         <TestimonialCard
+                            key={index}
                             photo={item.photo}
                             logo={item.logo}
                             name={item.name}

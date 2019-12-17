@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import bg from "../assets/img/bgSmallCard.png"
 import vars from "../assets/styles/varsStyles";
+// import {device} from "../assets/styles/mediaVars";
 
 const Item = styled.div`
 width: 90%;
@@ -20,6 +21,7 @@ justify-content: space-around;
 align-items: center;
 padding: 34px 0 20px;
 transition: .4s ease all;
+margin: 20px;
 &:hover{
 p{
 height: auto;
