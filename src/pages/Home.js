@@ -209,6 +209,18 @@ background-image: url("${bgTestimonials}");
 background-position: top center;
 background-repeat: no-repeat;
 background-size: cover;
+a.button{
+width: 220px;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 95px auto 170px;
+text-transform: uppercase;
+border: 1px solid ${vars.colors.brand1};
+color: ${vars.colors.brand1};
+border-radius: 8px;
+}
 .slick-slider{
 width: 90%;
 max-width: 570px;
@@ -314,7 +326,9 @@ const Home = props => {
            </SliderSection>
            <TestimonialsSection>
                {/*<TestimonialsSlider/>*/}
+
                <TestimonialSlick/>
+               <a className="button" href="/testimonials">all TESTIMONIALS</a>
            </TestimonialsSection>
            <PricingSection>
                <Container justifystart>
@@ -351,7 +365,6 @@ const Home = props => {
                        <TwitterLink target="_blank" href="https://twitter.com/skybox">See all</TwitterLink>
                    </Feed>
                </Container>
-
            </TwitterSection>
        </main>
     )
