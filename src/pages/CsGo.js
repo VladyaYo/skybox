@@ -80,13 +80,23 @@ const Text = styled.div`
 max-width: 545px;
 p{
 color: ${vars.colors.brand1};
+font-size: 24px;
+line-height: 28px;
 span{
 font-weight: 600;
 }
 }
 `;
 const TabsSection = styled.section`
-
+.heading{
+font-weight: 600;
+font-size: 36px;
+line-height: 42px;
+text-align: center;
+text-transform: uppercase;
+color: ${vars.colors.brand1};
+margin: 150px auto 60px;
+}
 `;
 const CsGo = props => {
     const {firstScreen} = pagesData.csgoPage;
@@ -117,6 +127,7 @@ const CsGo = props => {
                </Container>
            </InfoSection>
            <TabsSection>
+               <p className="heading">{infoBlock.tabsHeading}</p>
                <TabsCs/>
            </TabsSection>
        </main>

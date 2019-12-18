@@ -37,6 +37,9 @@ line-height: 28px;
 text-align: center;
 color: ${vars.colors.brand1};
 transition: .2s ease all;
+&:hover{
+cursor: pointer;
+}
 @media ${device.laptop}{
 margin:20px auto 0;
 }
@@ -119,14 +122,14 @@ max-width: 1170px;
         content: "";
         left: auto;
         right: -70px;
-        top: -35px;
-        max-height: 100%;
+        top: -27px;
         width: 100%;
         height: 130%;
         background-image: url("${decor2}");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: right top;
+        
         @media ${device.tablet}{
         right: -5%;
         }
@@ -142,12 +145,11 @@ max-width: 1170px;
   &:before{
     content: "";
     right: auto;
-    top: -28px;
-    left: -28px;
-    max-height: 100%;
+    top: -10%;
+    left: -5%;
     width: 100%;
     height: 130%;
-    background-image: url("${decor2}");
+    background-image: url("${decor3}");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right top;
@@ -159,8 +161,21 @@ max-width: 1170px;
 }
   &:nth-child(5n+5){
   .imageWrapp{
-  &:before{
-    display: none;
+   &:before{
+    content: "";
+    top: -10%;
+    left: auto;
+    right: -5%;
+   
+    width: 100%;
+    height: 130%;
+    background-image: url("${decor4}");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right top;
+    @media ${device.tablet}{
+        right: -5%;
+    }
   }
   }
 }
@@ -173,13 +188,14 @@ max-width: 1170px;
         right: auto;
         top: -72px;
         left: -121px;
-        max-height: 100%;
         width: 100%;
-        height: 130%;
-        background-image: url("${decor2}");
+        height: 150%;
+        background-image: url("${decor1}");
         background-size: contain;
         background-repeat: no-repeat;
-        background-position: right top;
+        background-position: left top;
+        position: absolute;
+        z-index: -1;
         @media ${device.tablet}{
         right: -5%;
         }

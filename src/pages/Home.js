@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import styled from "styled-components";
-
 import vars from "../assets/styles/varsStyles";
 import {device}  from "../assets/styles/mediaVars";
 
@@ -20,6 +19,7 @@ import bgGetFree from '../assets/img/bgGetFree.jpg';
 import bgTestimonials from '../assets/img/bgTestimonials.svg';
 import arrowsLeft from '../assets/img/arrowL.svg';
 import arrowsRight from '../assets/img/arrowR.svg';
+import bgMain from '../assets/videos/main_firstScreen.mp4'
 
 
 import pagesData from "../assets/data/datatext"
@@ -134,7 +134,9 @@ color: ${vars.colors.brand1};
 }
 p{
 margin:30px 0 10px;
-color: ${vars.colors.textBlack}
+color: ${vars.colors.textBlack};
+font-size: 24px;
+line-height: 28px;
 }
 & > a{
 border: 1px solid ${vars.colors.brand1};
@@ -224,7 +226,7 @@ border-radius: 8px;
 .slick-slider{
 width: 90%;
 max-width: 570px;
-margin: auto;
+margin: 362px auto 0;
 @media ${device.mobileL}{
   width: 83%;
 }
@@ -297,6 +299,7 @@ const Home = props => {
     return (
        <main>
         <FirstScreen>
+
             <Container justifystart>
                 <MainTextBlock>
                     <h1><span><strong>{firstScreen.h1span}</strong></span>{firstScreen.h1}</h1>
@@ -312,9 +315,9 @@ const Home = props => {
                 <Container justifystart>
                     <Text>
                         <h2>{getFree.heading}</h2>
-                        <p>{getFree.subheading}</p>
+                        <p dangerouslySetInnerHTML={{__html:getFree.subheading}}/>
                         <Link to={`download`}>
-                            {getFree.heading}
+                            {getFree.button}
                         </Link>
                     </Text>
                 </Container>

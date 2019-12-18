@@ -24,7 +24,9 @@ const pagesData = {
             },
             getFree:{
                 heading:"Get Skybox free",
-                subheading:"Get started with our free suite of tools. Upgrade when you’re ready!"
+                subheading:`Get started with our free suite of tools. Upgrade when you’re ready!<br/> Sign up for the early access.`,
+                button: "Sign up"
+
             },
             trustedBy:[
                 {
@@ -187,15 +189,18 @@ const pagesData = {
             firstScreen:{
                 image: logocs ,
                 subheading: "Experience CS:GO like never before! Visualize, Analyse, Excel – The world’s best CS:GO teams use Skybox",
-                button: "GET SKYBOX FOR FREE",
+                button: "Early access",
 
             },
             infoBlock:{
                 text:"The Skybox platform integrates a set of powerful tools to let you analyse gameplay, pinpoint critical improvement areas and find your winning edge in",
                 bold: " Counterstrike: Global Offensive!",
+                tabsHeading:"Who are you?",
             },
             tabs:[
+
                 {
+
                     button: "Players, Teams & Coaches",
                     heading:"Skybox 3D Viewer",
                     subheading:"A superpowered platform to take your CS:GO game to new levels!",
