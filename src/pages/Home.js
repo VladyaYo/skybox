@@ -43,6 +43,17 @@ background-size: cover;
 position:relative;
 top: -84px;
 min-height: 680px;
+max-height: 100vh;
+overflow: hidden;
+video{
+ min-width: 100%;
+  min-height: 100%;
+  //max-height: 680px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+}
 `;
 const MainTextBlock = styled.div`
 display: flex;
@@ -53,6 +64,7 @@ width: 90%;
 max-width: 546px;
 color: #ffffff;
 margin-top: 235px;
+z-index: 20;
 p{
 @media ${device.tablet} {
 max-width: 70%;
@@ -299,7 +311,16 @@ const Home = props => {
     return (
        <main>
         <FirstScreen>
-
+            <video
+                autoPlay
+                muted
+                loop
+                >
+                <source
+                    src={bgMain}
+                    type="video/mp4"
+                />
+            </video>
             <Container justifystart>
                 <MainTextBlock>
                     <h1><span><strong>{firstScreen.h1span}</strong></span>{firstScreen.h1}</h1>
