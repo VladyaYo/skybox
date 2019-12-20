@@ -51,7 +51,7 @@ video{
   //max-height: 680px;
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   
 }
 `;
@@ -315,6 +315,7 @@ const Home = props => {
                 autoPlay
                 muted
                 loop
+                playsInline={true}
                 >
                 <source
                     src={bgMain}

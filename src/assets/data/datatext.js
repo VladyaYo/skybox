@@ -147,13 +147,15 @@ const pagesData = {
                     tabButtonBg: btnBg1,
                     span: "Go deep",
                     text: " inside matches with the Skybox 3D Viewer!",
-                    bg: tab1bg
+                    link: "/cs-go#tab1",
+                    bg: tab1bg,
                 },
                 {
                     tabButtonText: "Actionable Insighte",
                     tabButtonBg: btnBg2,
                     span: "The Analytics Portal",
                     text: " gives you the information you need to win!",
+                    link: "/cs-go#tab2",
                     bg: imgNews1
                 },
                 {
@@ -161,6 +163,7 @@ const pagesData = {
                     tabButtonBg: btnBg3,
                     span: "Get the Skybox",
                     text: " toolbox to take event broadcasts to the next level!",
+                    link: "/cs-go#tab1",
                     bg: imgNews1
                 }
             ],

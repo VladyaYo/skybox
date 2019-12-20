@@ -6,10 +6,10 @@ import pagesData from "../assets/data/datatext";
 import vars from "../assets/styles/varsStyles";
 import {device} from "../assets/styles/mediaVars";
 //images
-import decor1 from "../assets/img/decorPhoto1.svg"
-import decor2 from "../assets/img/decorPhoto2.svg"
-import decor3 from "../assets/img/decorPhoto3.svg"
-import decor4 from "../assets/img/decorPhoto4.svg"
+import decor1 from "../assets/img/1.gif"
+import decor2 from "../assets/img/2.gif"
+import decor3 from "../assets/img/3.gif"
+import decor4 from "../assets/img/4.gif"
 
 
 const Container = styled.div`
@@ -186,9 +186,9 @@ max-width: 1170px;
   &:before{
   content: "";
         right: auto;
-        top: -72px;
+        top: -42px;
         left: -121px;
-        width: 100%;
+        width: 130%;
         height: 150%;
         background-image: url("${decor1}");
         background-size: contain;
@@ -230,8 +230,8 @@ const TabsCs = props => {
     const {tabs} = pagesData.csgoPage;
 
     return (
-        <Container>
-            <Tabs>
+        <Container >
+            <Tabs defaultIndex={0} onSelect={index => console.log(index)}>
                 <TabList>
                     {tabs.map((item, index)=>{
                         return(

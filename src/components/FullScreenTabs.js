@@ -166,8 +166,8 @@ const FullScreenTabs = props => {
                       key={index}
                   >
                     <CSSTransition
+                        in="true"
                       timeout={200}
-                      in={inProp}
                       classNames="page"
                     >
                       <div
@@ -178,7 +178,7 @@ const FullScreenTabs = props => {
                         <Container>
                           <Content>
                             <p><span><strong>{item.span}</strong></span>{item.text}</p>
-                            <a href="/">learn more</a>
+                            <a href={item.link} onClick={() => this.setState({tabIndex: 2})}>learn more</a>
                           </Content>
                         </Container>
                       </div>
