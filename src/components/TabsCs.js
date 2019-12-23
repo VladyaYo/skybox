@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import {useLocation} from 'react-router-dom';
 import styled from "styled-components";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 // import { TransitionGroup, CSSTransition} from 'react-transition-group';
@@ -14,8 +15,24 @@ import decor4 from "../assets/img/4.gif"
 const TabsCs = props => {
     const {tabs} = pagesData.csgoPage;
 
+    const location = useLocation();
+    const [selectedSlideIndex, setSelectedSlideIndex] = useState(0);
+    useEffect(() => {
+      switch(location.hash) {
+        case '#organisations':
+          setSelectedSlideIndex(1);
+          break;
+        case '#tournaments':
+          setSelectedSlideIndex(2);
+          break;
+        default:
+          setSelectedSlideIndex(0);
+          break;
+      }
+    }, [location.hash]);
+
     return (
-            <Tabs defaultIndex={0} onSelect={index => console.log(index)}>
+            <Tabs selectedIndex={selectedSlideIndex} onSelect={index => console.log(index)}>
                 <Container>
                 <TabList>
                     {tabs.map((item, index)=>{
