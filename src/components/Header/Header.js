@@ -7,6 +7,101 @@ import styled from "styled-components";
 import vars from "../../assets/styles/varsStyles"
 import {device} from "../../assets/styles/mediaVars";
 
+const Header = props => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const burgerClasses = [
+        'header-burger',
+        isMenuOpen ? 'open' : null
+    ];
+    const headerClasses = [
+        'header',
+        isMenuOpen ? 'open' : null
+    ];
+    const menuClasses = [
+        'header-nav',
+        isMenuOpen ? 'open' : null
+    ];
+    const onBurgerClick = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+    return (
+        <ContainerHeader className={headerClasses.join(' ')}>
+                <div
+                    className={burgerClasses.join(' ')}
+                    onClick={onBurgerClick}
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <Nav as="nav" className={menuClasses.join(' ')}>
+                    <Logo></Logo>
+                    <div className="wrapper">
+                    <LinkList className="menu header-menu">
+                        <li className="menu-item">
+                            <NavLink
+                                activeClassName="selected"
+                                className="menu-link"
+                                to={`/about-us/`}
+                            >
+                                About Us
+                            </NavLink>
+
+                        </li>
+                        <li className="menu-item">
+                            <NavLink
+                                activeClassName="selected"
+                                className="menu-link"
+                                to={`/cs-go/`}
+                            >
+                                CS:GO
+                            </NavLink>
+                        </li>
+                        <DropDown className="menu-item menu-dropdown">
+                            <Link to={`/pricing-player/`} className="menu-link">
+                                Pricing
+                            </Link>
+                            <DropList>
+                                <li className="submenu-item">
+                                    <Link className="submenu-link" to={`/pricing-player/`}>
+                                        Player
+                                    </Link>
+                                </li>
+                                <li className="submenu-item">
+                                    <Link className="submenu-link" to={`/pricing-team/`}>
+                                        Team
+                                    </Link>
+                                </li>
+                                <li className="submenu-item">
+                                    <Link className="submenu-link" to={`/pricing-tournament/`}>
+                                        Tournament
+                                    </Link>
+                                </li>
+                            </DropList>
+                        </DropDown>
+                        <li className="menu-item">
+                            <NavLink
+                                activeClassName="selected"
+                                className="menu-link"
+                                to={`/blog/`}
+                            >
+                                Blog
+                            </NavLink>
+                        </li>
+                    </LinkList>
+                    <Buttons>
+                    <Button >
+                        Log In
+                    </Button>
+                    <Button >
+                        Sign Up
+                    </Button>
+                    </Buttons>
+                    </div>
+                </Nav>
+        </ContainerHeader>
+    );
+};
 const ContainerHeader = styled.header`
 //background-color: rgba(67, 0, 209, 0.6);
 background-color: ${vars.colors.brand1};
@@ -178,6 +273,9 @@ transition: .4s ease-in-out;
 &:hover:before{
 width: 110%;
 }
+&.selected:before{
+width: 110%;
+}
  }
  }
 `;
@@ -285,102 +383,5 @@ const Button = styled.button`
   background-color: rgba(0,0,0,.3);
   }
 `;
-
-
-const Header = props => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const burgerClasses = [
-        'header-burger',
-        isMenuOpen ? 'open' : null
-    ];
-    const headerClasses = [
-        'header',
-        isMenuOpen ? 'open' : null
-    ];
-    const menuClasses = [
-        'header-nav',
-        isMenuOpen ? 'open' : null
-    ];
-    const onBurgerClick = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
-    return (
-        <ContainerHeader className={headerClasses.join(' ')}>
-                <div
-                    className={burgerClasses.join(' ')}
-                    onClick={onBurgerClick}
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <Nav as="nav" className={menuClasses.join(' ')}>
-                    <Logo></Logo>
-                    <div className="wrapper">
-                    <LinkList className="menu header-menu">
-                        <li className="menu-item">
-                            <NavLink
-                                activeClassName="selected"
-                                className="menu-link"
-                                to={`/about-us/`}
-                            >
-                                About Us
-                            </NavLink>
-
-                        </li>
-                        <li className="menu-item">
-                            <NavLink
-                                activeClassName="selected"
-                                className="menu-link"
-                                to={`/cs-go/`}
-                            >
-                                CS:GO
-                            </NavLink>
-                        </li>
-                        <DropDown className="menu-item menu-dropdown">
-                            <Link to={`/pricing-player/`} className="menu-link">
-                                Pricing
-                            </Link>
-                            <DropList>
-                                <li className="submenu-item">
-                                    <Link className="submenu-link" to={`/pricing-player/`}>
-                                        Player
-                                    </Link>
-                                </li>
-                                <li className="submenu-item">
-                                    <Link className="submenu-link" to={`/pricing-team/`}>
-                                        Team
-                                    </Link>
-                                </li>
-                                <li className="submenu-item">
-                                    <Link className="submenu-link" to={`/pricing-tournament/`}>
-                                        Tournament
-                                    </Link>
-                                </li>
-                            </DropList>
-                        </DropDown>
-                        <li className="menu-item">
-                            <NavLink
-                                activeClassName="selected"
-                                className="menu-link"
-                                to={`/blog/`}
-                            >
-                                Blog
-                            </NavLink>
-                        </li>
-                    </LinkList>
-                    <Buttons>
-                    <Button >
-                        Log In
-                    </Button>
-                    <Button >
-                        Sign Up
-                    </Button>
-                    </Buttons>
-                    </div>
-                </Nav>
-        </ContainerHeader>
-    );
-}
 
 export default Header;

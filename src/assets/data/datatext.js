@@ -258,6 +258,13 @@ const pagesData = {
                             image: imgNews1,
                             heading: "Recruit the next stars!",
                             text: "Invite free agents into your organization to track their performance and monitor improvements",
+                        },
+                        {
+                            imgCenter:imgNews1,
+                            centerText:`Currently, we track <span>Counterstrike: Global Offensive</span> with new games being added during Q1-Q2 2020`,
+                            subheading: "Check out the feature list & sign up here",
+                            btn: "Early access"
+
                         }
                     ],
                 },
@@ -265,9 +272,13 @@ const pagesData = {
                     button: "Tournaments & Broadcasters",
                     block:[
                         {
-                            image: imgNews1,
-                            heading: "Recruit the next stars!",
-                            text: "Invite free agents into your organization to track their performance and monitor improvements",
+                            fullWidthBg: imgNews1,
+                            heading: "TOs & Broadcasters",
+                            about: "Over 60% of the esports audience watch content in order to help them improve. Let’s make this easy for them!",
+                            logoMain1:"",
+                            logoMain2:"",
+                            logoMain3:"",
+
                         },
                         {
                             image: imgNews1,
@@ -278,5 +289,5 @@ const pagesData = {
                 }
             ]
         }
-    }
+    };
 export default pagesData;

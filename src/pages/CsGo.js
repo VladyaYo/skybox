@@ -7,6 +7,8 @@ import vars from "../assets/styles/varsStyles";
 import pagesData from "../assets/data/datatext";
 import bgfirstscreen from "../assets/img/bgcsgoMain.jpg";
 import bginfoBlock from "../assets/img/bgtextBlock.svg";
+import mainBgVideo from "../assets/videos/cs-goMain.mp4"
+
 // import {device} from "../assets/styles/mediaVars";
 
 
@@ -27,8 +29,20 @@ background-size: cover;
 position:relative;
 top: -84px;
 min-height: 680px;
+max-height: 100vh;
+overflow: hidden;
+video{
+ min-width: 100%;
+  min-height: 100%;
+  //max-height: 680px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  
+}
 `;
 const MainTextBlock = styled.div`
+z-index: 20;
 display: flex;
 flex-flow: column;
 justify-content: space-between;
@@ -36,7 +50,7 @@ align-items: flex-start;
 width: 90%;
 max-width: 434px;
 color: #ffffff;
-margin-top: 135px;
+margin-top: 185px;
 p{
 font-style: normal;
 font-weight: 600;
@@ -106,6 +120,17 @@ const CsGo = props => {
     return (
        <main>
            <FirstScreen>
+               <video
+                   autoPlay
+                   muted
+                   loop
+                   playsinline={true}
+               >
+                   <source
+                       src={mainBgVideo}
+                       type="video/mp4"
+                   />
+               </video>
                <Container justifystart>
                    <MainTextBlock>
                        <ImageWrap>

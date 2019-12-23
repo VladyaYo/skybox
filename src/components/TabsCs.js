@@ -11,7 +11,113 @@ import decor2 from "../assets/img/2.gif"
 import decor3 from "../assets/img/3.gif"
 import decor4 from "../assets/img/4.gif"
 
+const TabsCs = props => {
+    const {tabs} = pagesData.csgoPage;
 
+    return (
+            <Tabs defaultIndex={0} onSelect={index => console.log(index)}>
+                <Container>
+                <TabList>
+                    {tabs.map((item, index)=>{
+                        return(
+                            <Tab
+                                key={index}
+                                index={index}
+                            >
+                                {item.button}
+                            </Tab>
+                    )})}
+                </TabList>
+                </Container>
+                {tabs.map((item, index)=>{
+                    return(
+                        <TabPanel
+                            key={index}
+                            index={index}
+                            >
+                                    <Main>
+                                        { item.subheading ?
+                                            <p className="legend" dangerouslySetInnerHTML={{__html:item.subheading}}/> :
+                                            null
+                                        }
+                                        { item.heading ?
+                                            <p className="heading">{item.heading}</p> :
+                                            null
+                                        }
+                                        { item.subheading2 ?
+                                            <p className="subheading"><strong>{item.bold}</strong>{item.subheading2}</p> :
+                                            null
+                                        }
+                                    </Main>
+                                {item.block && item.block.map((item2, index)=>{
+                                    return(
+                                            <Block
+                                                index={index}
+                                                key={index}
+                                            >
+                                                { item2.mainHeading ?
+                                                    <Container>
+                                                        <h2>{item2.mainHeading}</h2>
+                                                    </Container>
+                                                    : null }
+                                                {item2.text && (
+                                                    <Container>
+                                                { item2.image ?
+                                                        <div className="imageWrapp">
+                                                            <img src={item2.image} alt=""/>
+                                                        </div>
+                                                    : null }
+                                            { item2.text && (
+                                                    <div className="text">
+                                                    { item2.heading ? <h4>{item2.heading}</h4> : null }
+                                                    { item2.text ? <p>{item2.text}</p> : null }
+                                                </div>
+                                            )}
+                                                    </Container>
+                                                )}
+                                                { item2.centerText ?
+                                                    <CenterText>
+                                                        <div className="imgWrap">
+                                                            <img src={item2.imgCenter} alt=""/>
+                                                        </div>
+                                                        <div className="textBlock">
+                                                            <p className="heading" dangerouslySetInnerHTML={{__html:item2.centerText}}/>
+                                                            <p className="subheading">{item2.subheading}</p>
+                                                            <a href="#">{item2.btn}</a>
+                                                        </div>
+                                                    </CenterText>
+                                                    : null
+                                                }
+                                                { item2.fullWidthBg ?
+                                                    <TopFullBg
+                                                        style={{
+                                                            backgroundImage: 'url(' + item2.fullWidthBg + ')'
+                                                        }}
+                                                    >
+                                                        <div className="textWrap">
+                                                            <p className="heading">{item2.heading}</p>
+                                                            <p className="info">{item2.about}</p>
+                                                        </div>
+                                                        <div className="logos">
+                                                            <div className="logoWrap">
+                                                                <img src={item2.logoMain1} alt="logo"/>
+                                                            </div>
+                                                            <div className="logoWrap">
+                                                                <img src={item2.logoMain2} alt="logo"/>
+                                                            </div>
+                                                            <div className="logoWrap">
+                                                                <img src={item2.logoMain3} alt="logo"/>
+                                                            </div>
+                                                        </div>
+                                                    </TopFullBg>
+                                                    :null}
+                                            </Block>
+                                )})}
+                        </TabPanel>
+                    )})}
+            </Tabs>
+    )
+};
 const Container = styled.div`
 ul{
 display: flex;
@@ -19,8 +125,9 @@ flex-flow: row wrap;
 justify-content: space-between;
 align-items: center;
 width: 90%;
-margin: auto;
 max-width: 1170px;
+margin: auto;
+
 li{
 max-width: 370px;
 min-height: 80px;
@@ -52,7 +159,7 @@ color: ${vars.colors.white};
 `;
 const Main = styled.div`
 margin: 100px auto 30px;
-width: 90%;
+width: 100%;
 
 
 .legend{
@@ -89,6 +196,21 @@ line-height: 21px;
 }
 `;
 const Block = styled.div`
+  max-width: 1920px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 173px auto 65px;
+${Container}{
+width: 90%;
+margin: auto;
+max-width: 1170px;
+justify-content: space-between;
+display: flex;
+align-items: center;}
+}
 .option-enter{
 opacity: 0;
 }
@@ -108,14 +230,8 @@ h2{
   margin:auto;
   color:${vars.colors.brand1};
   }
-max-width: 1170px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  margin: 173px auto 65px;
   &:nth-child(odd){
+  ${Container}{
     flex-direction: row-reverse;
     .imageWrapp{
      &:before{
@@ -138,6 +254,7 @@ max-width: 1170px;
         position: absolute;
         right: 0;
       }
+  }
   }
   }
   &:nth-child(4n+4){
@@ -225,69 +342,55 @@ max-width: 1170px;
   }
 }
 `;
+const CenterText = styled.div`
+width: 90%;
+max-width: 800px;
+display: flex;
+flex-flow: column;
+align-items: center;
+justify-content: space-between;
+margin: auto;
+.imgWrap{
 
-const TabsCs = props => {
-    const {tabs} = pagesData.csgoPage;
+}
+.textBlock{
+.heading{
+font-weight: 600;
+font-size: 24px;
+line-height: 28px;
+text-align: center;
+color: ${vars.colors.textBlack};
+text-transform: none;
+span{
+background-color: ${vars.colors.brand1};
+color: ${vars.colors.white};
+}
+}
+.subheading{
+font-size: 18px;
+line-height: 21px;
+text-align: center;
+}
+a{
+max-width: 230px;
+min-height: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+border: 1px solid ${vars.colors.brand1};
+border-radius:4px;
+color: ${vars.colors.brand1};
+margin: 30px auto;
 
-    return (
-        <Container >
-            <Tabs defaultIndex={0} onSelect={index => console.log(index)}>
-                <TabList>
-                    {tabs.map((item, index)=>{
-                        return(
-                            <Tab
-                                key={index}
-                                index={index}
-                            >
-                                {item.button}
-                            </Tab>
-                    )})}
-                </TabList>
-                {tabs.map((item, index)=>{
-                    return(
-                        <TabPanel
-                            key={index}
-                            index={index}
+}
+}
+`;
+const TopFullBg = styled.div`
+max-width: 1920px;
+width: 100%;
+margin: auto;
+min-height: 600px;
 
-                            >
-                                    <Main>
-                                        { item.subheading ?
-                                            <p className="legend" dangerouslySetInnerHTML={{__html:item.subheading}}/> :
-                                            null
-                                        }
-                                        { item.heading ?
-                                            <p className="heading">{item.heading}</p> :
-                                            null
-                                        }
-                                        { item.subheading2 ?
-                                            <p className="subheading"><strong>{item.bold}</strong>{item.subheading2}</p> :
-                                            null
-                                        }
-                                    </Main>
-                                {item.block && item.block.map((item2, index)=>{
-                                    return(
-                                            <Block
-                                                index={index}
-                                                key={index}
-                                            >
-                                            { item2.mainHeading ?
-                                                <h2>{item2.mainHeading}</h2>:
-                                                null }
-                                                { item2.image ?
-                                            <div className="imageWrapp">
-                                                <img src={item2.image} alt=""/>
-                                            </div> : null }
-                                            { item2.text && (
-                                            <div className="text">
-                                                    { item2.heading ? <h4>{item2.heading}</h4> : null }
-                                                    { item2.text ? <p>{item2.text}</p> : null }
-                                                </div> )}
-                                            </Block>
-                                )})}
-                        </TabPanel>
-                    )})}
-            </Tabs>
-        </Container>
-    )
-};
+
+`;
 export default TabsCs
