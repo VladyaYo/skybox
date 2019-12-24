@@ -147,7 +147,7 @@ const pagesData = {
                     tabButtonBg: btnBg1,
                     span: "Go deep",
                     text: " inside matches with the Skybox 3D Viewer!",
-                    link: "/cs-go#tab1",
+                    link: "/cs-go#players",
                     bg: tab1bg,
                 },
                 {
@@ -155,7 +155,7 @@ const pagesData = {
                     tabButtonBg: btnBg2,
                     span: "The Analytics Portal",
                     text: " gives you the information you need to win!",
-                    link: "/cs-go#tab2",
+                    link: "/cs-go#organisations",
                     bg: imgNews1
                 },
                 {
@@ -163,7 +163,7 @@ const pagesData = {
                     tabButtonBg: btnBg3,
                     span: "Get the Skybox",
                     text: " toolbox to take event broadcasts to the next level!",
-                    link: "/cs-go#tab1",
+                    link: "/cs-go#tournaments",
                     bg: imgNews1
                 }
             ],
@@ -201,9 +201,7 @@ const pagesData = {
                 tabsHeading:"Who are you?",
             },
             tabs:[
-
                 {
-
                     button: "Players, Teams & Coaches",
                     heading:"Skybox 3D Viewer",
                     subheading:"A superpowered platform to take your CS:GO game to new levels!",
@@ -278,6 +276,16 @@ const pagesData = {
                             logoMain1:"",
                             logoMain2:"",
                             logoMain3:"",
+                        },
+                        {
+                            logosHeading:"Trusted by",
+                           logo1:"",
+                            logo2:"",
+                            logo3:"",
+                            logo4:"",
+                            logo5:"",
+                            logo6:"",
+
 
                         },
                         {

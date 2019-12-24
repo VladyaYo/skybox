@@ -178,7 +178,7 @@ const FullScreenTabs = props => {
                         <Container>
                           <Content>
                             <p><span><strong>{item.span}</strong></span>{item.text}</p>
-                            <a href={item.link} onClick={() => this.setState({tabIndex: 2})}>learn more</a>
+                            <a href={item.link} >learn more</a>
                           </Content>
                         </Container>
                       </div>

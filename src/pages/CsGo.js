@@ -115,7 +115,6 @@ margin: 150px auto 60px;
 const CsGo = props => {
     const {firstScreen} = pagesData.csgoPage;
     const {infoBlock} = pagesData.csgoPage;
-    console.log(window.location.pathname);
 
     return (
        <main>
@@ -124,7 +123,7 @@ const CsGo = props => {
                    autoPlay
                    muted
                    loop
-                   playsinline={true}
+                    playsInline={true}
                >
                    <source
                        src={mainBgVideo}

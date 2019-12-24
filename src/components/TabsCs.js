@@ -6,11 +6,14 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import pagesData from "../assets/data/datatext";
 import vars from "../assets/styles/varsStyles";
 import {device} from "../assets/styles/mediaVars";
-//images
+//files
 import decor1 from "../assets/img/1.gif"
 import decor2 from "../assets/img/2.gif"
 import decor3 from "../assets/img/3.gif"
 import decor4 from "../assets/img/4.gif"
+import bgVideo1 from "../assets/videos/tab3-first.mp4"
+import bgVideo2 from "../assets/videos/tab3-second.mp4"
+import bgMain from "../assets/videos/main_firstScreen.mp4";
 
 const TabsCs = props => {
     const {tabs} = pagesData.csgoPage;
@@ -19,12 +22,18 @@ const TabsCs = props => {
     const [selectedSlideIndex, setSelectedSlideIndex] = useState(0);
     useEffect(() => {
       switch(location.hash) {
-        case '#organisations':
-          setSelectedSlideIndex(1);
-          break;
-        case '#tournaments':
-          setSelectedSlideIndex(2);
-          break;
+          case '#players':
+              setSelectedSlideIndex(0);
+              window.scroll(0, 1200);
+              break;
+              case '#organisations':
+                setSelectedSlideIndex(1);
+                window.scroll(0, 1200);
+                break;
+            case '#tournaments':
+            setSelectedSlideIndex(2);
+            window.scroll(0, 1200);
+            break;
         default:
           setSelectedSlideIndex(0);
           break;
@@ -32,7 +41,7 @@ const TabsCs = props => {
     }, [location.hash]);
 
     return (
-            <Tabs selectedIndex={selectedSlideIndex} onSelect={index => console.log(index)}>
+            <Tabs selectedIndex={selectedSlideIndex} onSelect={index => setSelectedSlideIndex(index)}>
                 <Container>
                 <TabList>
                     {tabs.map((item, index)=>{
@@ -111,6 +120,17 @@ const TabsCs = props => {
                                                             backgroundImage: 'url(' + item2.fullWidthBg + ')'
                                                         }}
                                                     >
+                                                        <video
+                                                            autoPlay
+                                                            muted
+                                                            loop
+                                                            playsinline={true}
+                                                        >
+                                                            <source
+                                                                src={bgVideo1}
+                                                                type="video/mp4"
+                                                            />
+                                                        </video>
                                                         <div className="textWrap">
                                                             <p className="heading">{item2.heading}</p>
                                                             <p className="info">{item2.about}</p>
@@ -127,6 +147,31 @@ const TabsCs = props => {
                                                             </div>
                                                         </div>
                                                     </TopFullBg>
+                                                    :null}
+                                                { item2.logosHeading ?
+                                                    <LogosBlock>
+                                                        <p>{item2.logosHeading}</p>
+                                                        <div className="logosWrapp">
+                                                            <div className="item">
+                                                                <img src={item2.logo1} alt=""/>
+                                                            </div>
+                                                            <div className="item">
+                                                                <img src={item2.logo2} alt=""/>
+                                                            </div>
+                                                            <div className="item">
+                                                                <img src={item2.logo3} alt=""/>
+                                                            </div>
+                                                            <div className="item">
+                                                                <img src={item2.logo4} alt=""/>
+                                                            </div>
+                                                            <div className="item">
+                                                                <img src={item2.logo5} alt=""/>
+                                                            </div>
+                                                            <div className="item">
+                                                                <img src={item2.logo6} alt=""/>
+                                                            </div>
+                                                        </div>
+                                                    </LogosBlock>
                                                     :null}
                                             </Block>
                                 )})}
@@ -407,7 +452,72 @@ max-width: 1920px;
 width: 100%;
 margin: auto;
 min-height: 600px;
+position: relative;
+overflow: hidden;
+&>*{
+position: relative;
+z-index: 10;
+}
+p{
+color: ${vars.colors.white};
+}
+.heading{
+font-weight: bold;
+font-size: 36px;
+line-height: 42px;
+text-align: center;
+}
+.info{
+font-size: 18px;
+line-height: 21px;
+text-align: center;
+max-width: 495px;
+margin: auto;
+}
+.logos{
+width: 90%;
+max-width: 717px;
+margin: 45px auto;
+display: flex;
+flex-flow: row wrap;
+justify-content: space-between;
+align-items: center;
+}
+video{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
 
-
+`;
+const LogosBlock = styled.div`
+width: 100%;
+p{
+text-align: center;
+margin: 0 auto 70px;
+font-weight: 600;
+font-size: 36px;
+text-transform: uppercase;
+color: ${vars.colors.brand1};
+}
+.logosWrapp{
+width: 90%;
+max-width: 1120px;
+margin: auto;
+display: flex;
+flex-flow: row wrap;
+justify-content: space-between;
+align-items: center;
+.item{
+width: 140px;
+height: 55px;
+img{
+width: 100%;
+max-height: 100%;
+}
+}
+}
 `;
 export default TabsCs
