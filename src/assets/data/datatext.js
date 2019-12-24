@@ -12,6 +12,16 @@ import tab1bg from "../img/bgTab1.jpg"
 import imgNews1 from "../img/newsImage1.jpg"
 import imgNews2 from "../img/imageNews2.jpg"
 import logocs from "../img/logocsgotransparent.png"
+import grayLogo1 from "../img/600px-CSGO_Asia_Summit 1.png"
+import grayLogo2 from "../img/rtp 1.png"
+import grayLogo3 from "../img/BLAST-Pro-Series-Logo-o99lkqp5jnsifxi4i01bhtf09efmnx4ize2efbiebk 1.png"
+import grayLogo4 from "../img/Freaks-4U-transp-web 1.png"
+import grayLogo5 from "../img/22 99Damage 1.png"
+import grayLogo6 from "../img/logo 1.png"
+import lightLogo1 from "../img/logoTeams/logo.png"
+import lightLogo2 from "../img/logoTeams/logo-1.png"
+import lightLogo3 from "../img/logoTeams/logo-2.png"
+import fullVideo from "../videos/tab3-second.mp4"
 
 const pagesData = {
         homeData:{
@@ -273,26 +283,27 @@ const pagesData = {
                             fullWidthBg: imgNews1,
                             heading: "TOs & Broadcasters",
                             about: "Over 60% of the esports audience watch content in order to help them improve. Let’s make this easy for them!",
-                            logoMain1:"",
-                            logoMain2:"",
-                            logoMain3:"",
+                            logoMain1: lightLogo1,
+                            logoMain2: lightLogo2,
+                            logoMain3: lightLogo3,
                         },
                         {
                             logosHeading:"Trusted by",
-                           logo1:"",
-                            logo2:"",
-                            logo3:"",
-                            logo4:"",
-                            logo5:"",
-                            logo6:"",
-
-
+                            logo1: grayLogo1,
+                            logo2: grayLogo2,
+                            logo3: grayLogo3,
+                            logo4: grayLogo4,
+                            logo5: grayLogo5,
+                            logo6: grayLogo6,
+                        },
+                        {
+                            fullVideo: fullVideo,
                         },
                         {
                             image: imgNews1,
                             heading: "Recruit the next stars!",
                             text: "Invite free agents into your organization to track their performance and monitor improvements",
-                        }
+                        },
                     ],
                 }
             ]

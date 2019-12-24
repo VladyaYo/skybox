@@ -19,7 +19,7 @@
 .env.production.local
 
 # files
-.mp4
+*.mp4
 
 npm-debug.log*
 yarn-debug.log*

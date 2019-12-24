@@ -173,6 +173,29 @@ const TabsCs = props => {
                                                         </div>
                                                     </LogosBlock>
                                                     :null}
+                                                { item2.fullVideo ?
+                                                    <FullVideoBlock>
+                                                        <video
+                                                            muted
+                                                            controls
+                                                            loop
+                                                            playsinline={true}
+                                                        >
+                                                            <source
+                                                                src={item2.fullVideo}
+                                                                type="video/mp4"
+                                                            />
+                                                        </video>
+                                                    </FullVideoBlock>
+                                                :null}
+                                                {item2.gifItems ?
+                                                    <GifsBlock>
+                                                        <div className="item">
+
+                                                        </div>
+                                                    </GifsBlock>
+
+                                                :null}
                                             </Block>
                                 )})}
                         </TabPanel>
@@ -513,11 +536,30 @@ align-items: center;
 .item{
 width: 140px;
 height: 55px;
+display: flex;
+align-items: center;
 img{
 width: 100%;
 max-height: 100%;
 }
 }
+}
+`;
+const FullVideoBlock = styled.div`
+width: 100%;
+max-width: 1920px;
+position: relative;
+//min-height: 800px;
+overflow-y: hidden;
+video{
+width: 100%;
+
+
+}
+`;
+const GifsBlock = styled.div`
+.item{
+
 }
 `;
 export default TabsCs
