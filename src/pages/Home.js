@@ -238,7 +238,7 @@ border-radius: 8px;
 .slick-slider{
 width: 90%;
 max-width: 570px;
-margin: 362px auto 0;
+margin: 262px auto 0;
 @media ${device.mobileL}{
   width: 83%;
 }
@@ -350,8 +350,6 @@ const Home = props => {
                </SliderWrap>
            </SliderSection>
            <TestimonialsSection>
-               {/*<TestimonialsSlider/>*/}
-
                <TestimonialSlick/>
                <a className="button" href="/testimonials">all TESTIMONIALS</a>
            </TestimonialsSection>

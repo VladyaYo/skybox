@@ -5,6 +5,18 @@ import bg from "../assets/img/bgSmallCard.png"
 import vars from "../assets/styles/varsStyles";
 // import {device} from "../assets/styles/mediaVars";
 
+const WrapImg=styled.div`
+display: flex;
+flex-flow: row wrap;
+justify-content: center;
+align-items: center;
+width: 90%;
+min-height: 106px ;
+margin: auto;
+&>*{
+margin: auto;
+}
+`;
 const Item = styled.div`
 width: 90%;
 max-width: 270px;
@@ -22,7 +34,18 @@ align-items: center;
 padding: 34px 0 20px;
 transition: .4s ease all;
 margin: 20px;
+*{
+transition: .4s ease all;
+max-height: 0;
+}
+}
 &:hover{
+*{
+max-height: 100px;
+}
+${WrapImg}{
+margin: 0;
+}
 p{
 height: auto;
 }
@@ -52,17 +75,7 @@ overflow:hidden;
 transition: .4s ease all;
 }
 `;
-const WrapImg=styled.div`
-display: flex;
-flex-flow: row wrap;
-justify-content: center;
-align-items: center;
-width: 90%;
-min-height: 106px ;
-&>*{
-margin: auto;
-}
-`;
+
 
 const Card = ({logo, title, description,link}) => {
     return (

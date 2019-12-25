@@ -34,7 +34,7 @@ box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.1);
 font-weight: 600;
 font-size: 18px;
 line-height: normal;
-margin: 30px auto 10px;
+margin: 30px 0 10px;
 width: 90%;
 color: ${vars.colors.brand1};
 }

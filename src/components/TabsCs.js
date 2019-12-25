@@ -176,9 +176,7 @@ const TabsCs = props => {
                                                 { item2.fullVideo ?
                                                     <FullVideoBlock>
                                                         <video
-                                                            muted
                                                             controls
-                                                            loop
                                                             playsinline={true}
                                                         >
                                                             <source
@@ -191,7 +189,12 @@ const TabsCs = props => {
                                                 {item2.gifItems ?
                                                     <GifsBlock>
                                                         <div className="item">
-
+                                                            <p></p>
+                                                            <img src="" alt=""/>
+                                                        </div>
+                                                        <div className="item">
+                                                            <img src="" alt=""/>
+                                                            <p></p>
                                                         </div>
                                                     </GifsBlock>
 
@@ -385,6 +388,12 @@ h2{
   width: 600px;
   position: relative;
   height: 290px;
+  @media ${device.tablet}{
+  height: 170px;
+  }
+  @media ${device.mobileM}{
+  height:90px;
+  }
   &:before{
   content: "";
         right: auto;

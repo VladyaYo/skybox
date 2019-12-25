@@ -22,6 +22,17 @@ import lightLogo1 from "../img/logoTeams/logo.png"
 import lightLogo2 from "../img/logoTeams/logo-1.png"
 import lightLogo3 from "../img/logoTeams/logo-2.png"
 import fullVideo from "../videos/tab3-second.mp4"
+import tab1_1 from "../img/tab1_1.jpg"
+import tab1_2 from "../img/tab1_2.jpg"
+import tab1_3 from "../img/tab1_3.jpg"
+import tab1_4 from "../img/tab1_4.jpg"
+import tab1_5 from "../img/tab1_5.jpg"
+import tab1_6 from "../img/tab1_6.jpg"
+import tab1_7 from "../img/tab1_7.jpg"
+import tab1_8 from "../img/tab1_8.jpg"
+import tab2_1 from "../img/tab2_1.jpg"
+import tab3_1 from "../img/tab3_1.jpg"
+import tab3_2 from "../img/tab3_2.jpg"
 
 const pagesData = {
         homeData:{
@@ -203,7 +214,6 @@ const pagesData = {
                 image: logocs ,
                 subheading: "Experience CS:GO like never before! Visualize, Analyse, Excel – The world’s best CS:GO teams use Skybox",
                 button: "Early access",
-
             },
             infoBlock:{
                 text:"The Skybox platform integrates a set of powerful tools to let you analyse gameplay, pinpoint critical improvement areas and find your winning edge in",
@@ -219,32 +229,49 @@ const pagesData = {
                     subheading2:" (or just use Skybox to watch your frag highlights from a completely different perspective!)",
                     block:[
                         {
-                            image: imgNews1,
+                            image: tab1_1,
                             heading: "Context Matters!",
                             text: "Review matches in full 3D from any perspective including RTS, POV or free fly modes; glassify buildings and find out where and how to position the perfect nades."
                         },
                         {
-                            image: imgNews1,
+                            image: tab1_2,
                             heading: "Overlays fuel insights:",
                             text: "Apply Field of View (FOV), Nade Blast, Fog of War and other overlays to go deep inside executes; Learn from mistakes and construct the perfect attack."
                         },
                         {
-                            image: imgNews1,
-                            heading: "Overlays fuel insights:",
-                            text: "Apply Field of View (FOV), Nade Blast, Fog of War and other overlays to go deep inside executes; Learn from mistakes and construct the perfect attack."
+                            image: tab1_3,
+                            heading: "Time Matters!",
+                            text:"Access the fastest match processing from any server source (that we know of). Skip to any round or frame instantly. Review round summaries and deep link direct into key moments. Annotate and share with your team."
                         },
                         {
-                            image: imgNews1,
-                            heading: "Overlays fuel insights:",
-                            text: "Apply Field of View (FOV), Nade Blast, Fog of War and other overlays to go deep inside executes; Learn from mistakes and construct the perfect attack."
+                            image: tab1_4,
+                            heading: "Learn from the best or analyse your opponent!",
+                            text: "Upload any replay file and analyse how other teams play! Get round and match summaries like nade trajectories and hotspots."
                         },
                         {
-                            image: imgNews1,
-                            heading: "Overlays fuel insights:",
-                            text: "Apply Field of View (FOV), Nade Blast, Fog of War and other overlays to go deep inside executes; Learn from mistakes and construct the perfect attack."
+                            image: tab1_5,
+                            heading: "Analyse SCRIM POV & Coach demos!",
+                            text: "No server demo? No problem.  Analyse your teams gameplay via uploading a coach observer DEM file or the five POV DEMs of the players – our backend technology will construct the replay. The ultimate tool to coach based on SCRIM matches."
                         },
                         {
-                            mainHeading:"mainHeading"
+                         mainHeading:"Analytics Portal",
+                        },
+                        {
+                            image: tab1_6,
+                            heading: "Utilize powerful and meaningful data",
+                            text: "Learn where you’re improving and what you need to work on. Review critical points in a match via deeplinking into replays."
+                        },
+                        {
+                            image: tab1_7,
+                            heading: "Customized information",
+                            text: "Filter across a single match or many matches to gain deeper insight into how you perform in different situations"
+                        },
+                        {
+                            mainHeading:"Coaching"
+                        },
+                        {
+                            image: tab1_8,
+                            text: "It doesn’t matter if you are new to CS:GO or are a professional, Skybox ensures there is actionable information to help you guide your players and team. Signup to the team license and invite your players to join – it’s that simple to get started!"
                         },
                     ],
                 },
@@ -253,22 +280,22 @@ const pagesData = {
                     subheading: `Multiple teams or many players to manage? <span>Sky Suite</span> is for you!`,
                     block:[
                         {
-                            image: imgNews1,
+                            image: tab2_1,
                             heading: "Simple management!",
                             text: "Assign roles & permissions to organizational members, seamlessly manage players and teams and gain insight into your organization’s performance."
                         },
                         {
-                            image: imgNews1,
+                            image: tab2_1,
                             heading: "Powerful suite of tools!",
                             text: "Organization members can access the Skybox player, team and coaching tools to propel progression. "
                         },
                         {
-                            image: imgNews1,
+                            image: tab2_1,
                             heading: "Recruit the next stars!",
                             text: "Invite free agents into your organization to track their performance and monitor improvements",
                         },
                         {
-                            imgCenter:imgNews1,
+                            imgCenter: logocs,
                             centerText:`Currently, we track <span>Counterstrike: Global Offensive</span> with new games being added during Q1-Q2 2020`,
                             subheading: "Check out the feature list & sign up here",
                             btn: "Early access"
@@ -300,9 +327,16 @@ const pagesData = {
                             fullVideo: fullVideo,
                         },
                         {
-                            image: imgNews1,
-                            heading: "Recruit the next stars!",
-                            text: "Invite free agents into your organization to track their performance and monitor improvements",
+                            image: tab3_1,
+                            text: "Quickly find content and deep link into the Skybox 3D Viewer or into the CS:GO game client",
+                        },
+                        {
+                          mainHeading: "Skybox Live"
+                        },
+                        {
+                            image: tab3_2,
+                            heading: "Skybox Live turns CS:GO into a spectator’s sport!",
+                            text: "Receive the live game feed direct into Skybox; transforming the spectator experience and opening up a new world of possibilities. Contact us for more information! <br/> Signup now to use our suite of CS:GO tools plus be the first to access our new features and productlaunches occurring frequently",
                         },
                     ],
                 }
