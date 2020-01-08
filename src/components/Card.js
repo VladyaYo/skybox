@@ -34,11 +34,15 @@ align-items: center;
 padding: 34px 0 20px;
 transition: .4s ease all;
 margin: 20px;
+${WrapImg}{
+max-height: 140px;
+margin: 30% auto;
+}
 *{
 transition: .4s ease all;
-max-height: 0;
+
 }
-}
+
 &:hover{
 *{
 max-height: 100px;
@@ -60,6 +64,7 @@ h5{
 height: 0;
 transition: .4s ease all;
 overflow: hidden;
+max-height: 0;
 }
 p{
 max-width: 85%;
@@ -68,11 +73,13 @@ text-align: center;
 height: 0;
 overflow:hidden;
 transition: .4s ease all;
+max-height: 0;
 }
 a{
 height: 0;
 overflow:hidden;
 transition: .4s ease all;
+max-height: 0;
 }
 `;
 

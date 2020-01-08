@@ -327,6 +327,12 @@ const pagesData = {
                             fullVideo: fullVideo,
                         },
                         {
+                            gifImage1: imgNews1,
+                            gifImage2: imgNews2,
+                            gifText1: " Use screen mirroring to customise UI and annotate using the telestrator",
+                            gifText2: "Create cinematic effects with a few simple clicks"
+                        },
+                        {
                             image: tab3_1,
                             text: "Quickly find content and deep link into the Skybox 3D Viewer or into the CS:GO game client",
                         },
@@ -337,7 +343,9 @@ const pagesData = {
                             image: tab3_2,
                             heading: "Skybox Live turns CS:GO into a spectator’s sport!",
                             text: "Receive the live game feed direct into Skybox; transforming the spectator experience and opening up a new world of possibilities. Contact us for more information! <br/> Signup now to use our suite of CS:GO tools plus be the first to access our new features and productlaunches occurring frequently",
+                            buttonText: "get in touch"
                         },
+
                     ],
                 }
             ]

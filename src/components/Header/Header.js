@@ -269,6 +269,7 @@ left: -5%;
 bottom: -7px;
 background-color: ${vars.colors.white};
 transition: .4s ease-in-out;
+z-index: 50;
 }
 &:hover:before{
 width: 110%;

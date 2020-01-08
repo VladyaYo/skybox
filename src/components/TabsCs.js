@@ -12,8 +12,8 @@ import decor2 from "../assets/img/2.gif"
 import decor3 from "../assets/img/3.gif"
 import decor4 from "../assets/img/4.gif"
 import bgVideo1 from "../assets/videos/tab3-first.mp4"
-import bgVideo2 from "../assets/videos/tab3-second.mp4"
-import bgMain from "../assets/videos/main_firstScreen.mp4";
+// import bgVideo2 from "../assets/videos/tab3-second.mp4";
+// import bgMain from "../assets/videos/main_firstScreen.mp4";
 
 const TabsCs = props => {
     const {tabs} = pagesData.csgoPage;
@@ -97,6 +97,7 @@ const TabsCs = props => {
                                                     <div className="text">
                                                     { item2.heading ? <h4>{item2.heading}</h4> : null }
                                                     { item2.text ? <p>{item2.text}</p> : null }
+                                                    { item2.buttonText ? <a href="#" className="btn">{item2.buttonText}</a> : null }
                                                 </div>
                                             )}
                                                     </Container>
@@ -186,18 +187,17 @@ const TabsCs = props => {
                                                         </video>
                                                     </FullVideoBlock>
                                                 :null}
-                                                {item2.gifItems ?
+                                                {item2.gifText1 ?
                                                     <GifsBlock>
                                                         <div className="item">
-                                                            <p></p>
-                                                            <img src="" alt=""/>
+                                                            <p>{item2.gifText1}</p>
+                                                            <img src={item2.gifImage1} alt=""/>
                                                         </div>
                                                         <div className="item">
-                                                            <img src="" alt=""/>
-                                                            <p></p>
+                                                            <img src={item2.gifImage2} alt=""/>
+                                                            <p>{item2.gifText2}</p>
                                                         </div>
                                                     </GifsBlock>
-
                                                 :null}
                                             </Block>
                                 )})}
@@ -207,6 +207,7 @@ const TabsCs = props => {
     )
 };
 const Container = styled.div`
+
 ul{
 display: flex;
 flex-flow: row wrap;
@@ -251,6 +252,8 @@ width: 100%;
 
 
 .legend{
+max-width: 90%;
+margin: auto;
 font-weight: 600;
 font-size: 24px;
 line-height: 28px;
@@ -291,13 +294,40 @@ const Block = styled.div`
   align-items: center;
   width: 100%;
   margin: 173px auto 65px;
-${Container}{
-width: 90%;
-margin: auto;
-max-width: 1170px;
-justify-content: space-between;
-display: flex;
-align-items: center;}
+  ${Container}{
+  width: 90%;
+  margin: auto;
+  max-width: 1170px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  .text{
+    display: flex;
+    flex-flow: column;
+  .btn{
+    padding:10px 30px;
+    border: 1px solid ${vars.colors.brand1};
+    color: ${vars.colors.brand1};
+    margin: 30px 0;
+    border-radius: 3px;
+    &:hover{
+    background-color: ${vars.colors.brand1};
+    color:${vars.colors.white}
+    }
+    }
+    }
+@media ${device.mobileL}{
+flex-direction: column;
+.imageWrapp{
+width:100%;
+height:auto;
+}
+.text{
+width:100%;
+    margin-top: 40px;
+  
+}
+}
 }
 .option-enter{
 opacity: 0;
@@ -321,6 +351,9 @@ h2{
   &:nth-child(odd){
   ${Container}{
     flex-direction: row-reverse;
+    @media ${device.mobileL}{
+     flex-direction: column;
+}
     .imageWrapp{
      &:before{
         content: "";
@@ -393,6 +426,7 @@ h2{
   }
   @media ${device.mobileM}{
   height:90px;
+  min-height: 160px;
   }
   &:before{
   content: "";
@@ -417,7 +451,7 @@ h2{
   }
 }
 .text{
-  width: 500px;
+  max-width: 500px;
   
   h4{
     font-weight: bold;
@@ -567,8 +601,29 @@ width: 100%;
 }
 `;
 const GifsBlock = styled.div`
+max-width: 1170px;
+margin: auto;
+display: flex;
+flex-flow: row wrap;
+justify-content: space-between;
+align-items: center;
+width: 90%;
 .item{
-
+display: flex;
+flex-flow: column wrap;
+justify-content: space-between;
+align-items: flex-start;
+max-width: 570px;
+&:nth-child(2){
+margin-top: 40px;
+img{
+padding-top: 44px;
+}
+}
+p{
+padding: 20px 0;
+color: ${vars.colors.brand1};
+}
 }
 `;
 export default TabsCs
