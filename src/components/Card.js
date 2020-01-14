@@ -92,7 +92,7 @@ const Card = ({logo, title, description,link}) => {
             </WrapImg>
             <h5>{title}</h5>
             <p>{description}</p>
-            <a href={link}>{link}</a>
+            <a rel="noopener noreferrer" target="_blank" href={`http://${link}`}>{link}</a>
         </Item>
     )
 };

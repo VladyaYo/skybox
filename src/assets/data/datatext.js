@@ -54,52 +54,52 @@ const pagesData = {
                     logo:logo1,
                     title:"esl",
                     description: "World’s largest esports organisation running professional events and broadcasts",
-                    link: "www.eslgaming.com"
+                    link: "eslgaming.com"
                 },
                 {
                     logo:logo2,
                     title:"CLOUD9",
                     description: "North American Professional MGO",
-                    link: "www.cloud9.gg"
+                    link: "cloud9.gg"
                 },
                 {
                     logo:logo3,
                     title:"NACCS",
                     description: "North American Collegiate Counterstrike representing over 300 college teams",
-                    link: "Visit site"
+                    link: "collegiatecounterstrike.com"
                 },
                 {
                     logo:logo4,
                     title:"Team Liquid",
                     description: "Worldwide Professional MGO",
-                    link: "www.eslgaming.com"
+                    link: "teamliquid.com"
                 },
                 {
                     logo:logo5,
                     title:"Freaks4U",
                     description: "German and French Broadcaster working across numerous verticals",
-                    link: "www.eslgaming.com"
+                    link: "freaks4u.de"
                 },
                 {
-                    logo:"../assets/img/logoTeams/images%201.png",
+                    logo:logo5,
+                    title:"Sørby Esports",
+                    description: "World’s largest esports organisation running professional events and broadcasts",
+                    link: "sorby-esport.dk"
+                },
+                {
+                    logo:logo5,
                     title:"esl",
                     description: "World’s largest esports organisation running professional events and broadcasts",
                     link: "www.eslgaming.com"
                 },
                 {
-                    logo:"../assets/img/logoTeams/images%201.png",
+                    logo:logo5,
                     title:"esl",
                     description: "World’s largest esports organisation running professional events and broadcasts",
                     link: "www.eslgaming.com"
                 },
                 {
-                    logo:"../assets/img/logoTeams/images%201.png",
-                    title:"esl",
-                    description: "World’s largest esports organisation running professional events and broadcasts",
-                    link: "www.eslgaming.com"
-                },
-                {
-                    logo:"../assets/img/logoTeams/images%201.png",
+                    logo: logo5,
                     title:"esl",
                     description: "World’s largest esports organisation running professional events and broadcasts",
                     link: "www.eslgaming.com"
